@@ -36,7 +36,8 @@ export default function InvoiceDetailPage() {
 
   // Countdown timer state
   const [timeLeft, setTimeLeft] = useState({ minutes: 59, seconds: 59, totalSeconds: 3600 });
-  const [isExpired, setIsExpired] = useState(false);
+  const [timerExpired, setTimerExpired] = useState(false);
+  const isExpired = Boolean((order && order.payment_status === "EXPIRED") || timerExpired);
   const [copiedAmount, setCopiedAmount] = useState(false);
   const [copiedBca, setCopiedBca] = useState(false);
   const [copiedMandiri, setCopiedMandiri] = useState(false);
@@ -44,14 +45,7 @@ export default function InvoiceDetailPage() {
   const [uploadLoading, setUploadLoading] = useState(false);
 
   useEffect(() => {
-    if (!order) return;
-
-    if (order.payment_status === "EXPIRED") {
-      setIsExpired(true);
-      return;
-    }
-
-    if (order.payment_status !== "UNPAID") return;
+    if (!order || order.payment_status !== "UNPAID") return;
 
     const expiryTime = new Date(order.expires_at).getTime();
 
@@ -61,7 +55,7 @@ export default function InvoiceDetailPage() {
 
       if (diffMs <= 0) {
         clearInterval(interval);
-        setIsExpired(true);
+        setTimerExpired(true);
         markOrderExpired(order.invoice_code);
       } else {
         const totalSec = Math.floor(diffMs / 1000);

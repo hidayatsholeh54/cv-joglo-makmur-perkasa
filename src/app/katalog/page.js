@@ -31,12 +31,22 @@ import { useAppStore, formatRupiah } from "@/store/useAppStore";
 
 function KatalogContent() {
   const searchParams = useSearchParams();
-  const initialTab = searchParams.get("tab") === "susu" ? "SUSU" : "ALL";
+  const tabParam = searchParams.get("tab");
+  const [activeTab, setActiveTab] = useState(
+    tabParam === "susu" ? "SUSU" : tabParam === "ternak" ? "LIVESTOCK" : "ALL"
+  );
+  const [prevTab, setPrevTab] = useState(tabParam);
+
+  if (tabParam !== prevTab) {
+    setPrevTab(tabParam);
+    setActiveTab(
+      tabParam === "susu" ? "SUSU" : tabParam === "ternak" ? "LIVESTOCK" : "ALL"
+    );
+  }
 
   const livestockItems = useAppStore((s) => s.livestockItems);
   const products = useAppStore((s) => s.products);
 
-  const [activeTab, setActiveTab] = useState(initialTab); // "ALL" | "LIVESTOCK" | "SUSU"
   const [categoryFilter, setCategoryFilter] = useState("ALL");
   const [searchQuery, setSearchQuery] = useState("");
   const [qtyMap, setQtyMap] = useState({});
@@ -49,15 +59,6 @@ function KatalogContent() {
     setActivePhotoIndex(0);
     setSelectedDetail({ type, item });
   };
-
-  useEffect(() => {
-    const tabParam = searchParams.get("tab");
-    if (tabParam === "susu") {
-      setActiveTab("SUSU");
-    } else if (tabParam === "ternak") {
-      setActiveTab("LIVESTOCK");
-    }
-  }, [searchParams]);
 
   // Keyboard shortcut ESC to close modal
   useEffect(() => {

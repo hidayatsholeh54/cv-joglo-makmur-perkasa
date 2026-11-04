@@ -49,14 +49,14 @@ function CheckoutContent() {
   // Quick Google Login modal state if guest
   const [googleEmail, setGoogleEmail] = useState("");
   const [googleName, setGoogleName] = useState("");
+  const [prevUserId, setPrevUserId] = useState(currentUser?.id);
 
   // Sync form when currentUser changes
-  useEffect(() => {
-    if (currentUser) {
-      if (!customerName) setCustomerName(currentUser.full_name);
-      if (!customerWa) setCustomerWa(currentUser.phone_wa);
-    }
-  }, [currentUser]);
+  if (currentUser && currentUser.id !== prevUserId) {
+    setPrevUserId(currentUser.id);
+    if (!customerName) setCustomerName(currentUser.full_name);
+    if (!customerWa) setCustomerWa(currentUser.phone_wa);
+  }
 
   // Find Target Item
   const isLivestock = typeParam === "LIVESTOCK";

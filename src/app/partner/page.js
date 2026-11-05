@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import {
   Handshake,
-  PiggyBank,
   HeartHandshake,
   ArrowUpRight,
   ShieldCheck,
@@ -28,7 +27,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function PartnerPage() {
-  const [modalType, setModalType] = useState(null); // 'RESELLER' | 'JOGLO_HUB' | 'TABUNGAN_QURBAN' | 'QURBAN_PRAKTIS'
+  const [modalType, setModalType] = useState(null); // 'RESELLER' | 'JOGLO_HUB' | 'QURBAN_PRAKTIS'
   const [openFaq, setOpenFaq] = useState(null); // FAQ Accordion State
 
   // Tutup modal otomatis saat tombol Escape ditekan
@@ -49,18 +48,18 @@ export default function PartnerPage() {
           {/* Header Partner Seragam Rata Kiri */}
           <div className="max-w-3xl space-y-2">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Handshake className="w-3.5 h-3.5" /> 4 Pilar Kemitraan &amp; Program Berkelanjutan
+              <Handshake className="w-3.5 h-3.5" /> 3 Pilar Kemitraan Strategis
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-900 leading-tight">
               Ekosistem Kemitraan CV Joglo Makmur Perkasa
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-              Bergabung bersama ekosistem terpadu kami: peluang usaha reseller susu BPOM berulang, pemberdayaan peternak rakyat binaan, program tabungan qurban terencana, hingga penyaluran daging tepat sasaran di pelosok Nusantara.
+              Bergabung bersama ekosistem terpadu kami: peluang usaha reseller susu BPOM berulang, pemberdayaan peternak rakyat binaan (plasma), hingga penyaluran daging qurban tepat sasaran di pelosok Nusantara.
             </p>
           </div>
 
-          {/* 4 KARTU KEMITRAAN PERSIS ALA NUSAQU (RESPONSIF 2 KOLOM DI LAPTOP / 4 KOLOM DI WIDESCREEN) */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 sm:gap-5 items-stretch">
+          {/* 3 KARTU KEMITRAAN SIMETRIS DAN RESPONSIF */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
             {/* KARTU 1: RESELLER & AGEN SUSU BPOM (Peluang Usaha Rutin) */}
             <div
               onClick={() => setModalType("RESELLER")}
@@ -131,40 +130,7 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            {/* KARTU 3: TABUNGAN QURBAN KAMBING */}
-            <div
-              onClick={() => setModalType("TABUNGAN_QURBAN")}
-              className="rounded-[28px] p-6 bg-white border-2 border-slate-900/80 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group cursor-pointer"
-            >
-              <div className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#15803d] group-hover:scale-105 transition-transform">
-                  <PiggyBank className="w-6 h-6" />
-                </div>
-
-                <div className="space-y-2">
-                  <span className="text-xs font-extrabold uppercase tracking-wider text-[#15803d] block">
-                    03 • IBADAH TERENCANA
-                  </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#15803d] transition-colors">
-                    Tabungan Qurban
-                  </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Menabung qurban bertahap mulai <strong className="text-slate-900">Rp 220rb/bulan</strong>. Kunci harga di awal bebas lonjakan pasar, gratis rawat sampai hari H, serta amanah bila ada kendala setoran.
-                  </p>
-                </div>
-              </div>
-
-              <div className="pt-4 mt-4 border-t border-slate-100">
-                <div className="w-full flex items-center justify-between text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#15803d] group-hover:text-[#14532d]">
-                  <span>PELAJARI TABUNGAN</span>
-                  <div className="w-8 h-8 rounded-full bg-emerald-50 group-hover:bg-[#15803d] group-hover:text-white flex items-center justify-center transition-colors">
-                    <ArrowUpRight className="w-4 h-4 text-[#15803d] group-hover:text-white transition-colors" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* KARTU 4: QURBAN PRAKTIS (PELOSOK DIY & JAWA TENGAH) */}
+            {/* KARTU 3: QURBAN PRAKTIS (PELOSOK DIY & JAWA TENGAH) */}
             <div
               onClick={() => setModalType("QURBAN_PRAKTIS")}
               className="rounded-[28px] p-6 bg-white border-2 border-slate-200 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group cursor-pointer"
@@ -176,7 +142,7 @@ export default function PartnerPage() {
 
                 <div className="space-y-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea580c] block">
-                    04 • DISTRIBUSI SOSIAL
+                    03 • DISTRIBUSI SOSIAL
                   </span>
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#ea580c] transition-colors">
                     Qurban Praktis
@@ -232,7 +198,7 @@ export default function PartnerPage() {
                 <div className="space-y-1">
                   <h4 className="font-bold text-slate-900 text-sm sm:text-base">Jaminan Serap Panen &amp; Amanah</h4>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Kepastian offtaker panen bagi peternak plasma serta transparansi saldo tabungan qurban tanpa riba/denda.
+                    Kepastian offtaker panen bagi peternak plasma serta transparansi transaksi jual beli syar&apos;i bebas riba.
                   </p>
                 </div>
               </div>
@@ -249,7 +215,7 @@ export default function PartnerPage() {
                 Keterangan &amp; Tanya Jawab Kemitraan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Jawaban praktis seputar syarat reseller, pendampingan ternak plasma, tabungan qurban, hingga distribusi sosial.
+                Jawaban praktis seputar syarat reseller, pendampingan ternak plasma, pemesanan qurban cash, hingga distribusi sosial.
               </p>
             </div>
 
@@ -276,14 +242,14 @@ export default function PartnerPage() {
                 </p>
               </div>
 
-              {/* Q3: Tabungan Qurban */}
+              {/* Q3: Pembelian Qurban Cash & DP */}
               <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Apakah tabungan qurban bisa dialihkan jika ada kendala darurat?</span>
+                  <span>Bagaimana sistem pembelian hewan qurban dan fasilitas titip rawat?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
-                  <strong>Tentu bisa.</strong> Program ini berlandaskan akad tolong-menolong ibadah bebas bunga dan denda riba. Saldo amanah Anda dapat dialihkan ke anggota keluarga lain, digeser ke Idul Adha tahun berikutnya (rollover), atau dikembalikan secara musyawarah amanah.
+                  Pembelian dilakukan secara <strong>tunai (Full Cash) atau DP 50%</strong> untuk mengunci fisik dan nomor telinga (Ear Tag) hewan. Hewan dirawat dan diberi pakan berkualitas secara <strong>GRATIS di kandang Samigaluh Kulon Progo</strong> hingga jadwal kirim Hari H tanpa biaya tambahan.
                 </p>
               </div>
 
@@ -597,125 +563,7 @@ export default function PartnerPage() {
         </div>
       )}
 
-      {/* ==================================================================== */}
-      {/* MODAL DETAIL 3: TABUNGAN QURBAN KAMBING                              */}
-      {/* ==================================================================== */}
-      {modalType === "TABUNGAN_QURBAN" && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-hidden"
-          onClick={() => setModalType(null)}
-        >
-          {/* Backdrop Transparan Gelap: Klik Bebas di Luar untuk Keluar */}
-          <div
-            className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity cursor-pointer"
-            aria-hidden="true"
-          />
 
-          <div
-            onClick={(e) => e.stopPropagation()}
-            className="relative bg-white rounded-3xl sm:rounded-4xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-100 z-10 animate-in fade-in zoom-in-95 duration-200 overflow-hidden"
-          >
-            {/* Visual Hero Header */}
-            <div className="relative h-48 sm:h-52 w-full bg-slate-900 overflow-hidden shrink-0">
-              <img
-                src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=800&q=80"
-                alt="Kambing Qurban Poel Bertanduk"
-                className="w-full h-full object-cover object-center opacity-85"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-black/30" />
-
-              <div className="absolute bottom-4 left-5 sm:left-6 flex flex-wrap gap-2">
-                <span className="px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-[#15803d] text-xs sm:text-[13px] font-extrabold shadow-sm flex items-center gap-1.5">
-                  <PiggyBank className="w-4 h-4" />
-                  <span>Bebas Lonjakan Harga H-7</span>
-                </span>
-                <span className="px-3 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-xs text-white text-xs sm:text-[13px] font-semibold">
-                  Gratis Rawat &amp; Pakan
-                </span>
-              </div>
-
-              <button
-                onClick={() => setModalType(null)}
-                aria-label="Tutup"
-                className="absolute top-4 right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 flex items-center justify-center transition shadow-md cursor-pointer backdrop-blur-xs z-10"
-              >
-                <X className="w-5 h-5 stroke-[2.5]" />
-              </button>
-            </div>
-
-            {/* Isi Konten */}
-            <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
-              <div>
-                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#15803d] block">
-                  RENCANAKAN IBADAH SEJAK DINI
-                </span>
-                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-                  Tabungan Qurban Kambing Terencana
-                </h3>
-                <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
-                  Menyisihkan dana secara bertahap setiap bulan agar niat ibadah qurban tertunaikan dengan nyaman dan lapang menjelang Hari Raya Idul Adha.
-                </p>
-              </div>
-
-              {/* 2 Pilihan Kelas Kambing */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="text-slate-500 block font-medium text-xs sm:text-sm">Kambing / Domba Standar</span>
-                  <strong className="text-slate-900 text-base sm:text-lg block">Mulai Rp 220rb / bln</strong>
-                  <span className="text-slate-500 block text-xs sm:text-sm">Bobot 24–27 Kg • Estimasi 10x Setor</span>
-                </div>
-
-                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="text-slate-500 block font-medium text-xs sm:text-sm">Kambing / Domba Super</span>
-                  <strong className="text-slate-900 text-base sm:text-lg block">Mulai Rp 320rb / bln</strong>
-                  <span className="text-slate-500 block text-xs sm:text-sm">Bobot 30–35 Kg • Estimasi 10x Setor</span>
-                </div>
-              </div>
-
-              {/* 4 Keunggulan Nilai */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="font-bold text-slate-900 block text-sm sm:text-base">Harga Terkunci Permanen</span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Bebas kenaikan harga hewan di pasaran saat menjelang Hari Raya.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="font-bold text-slate-900 block text-sm sm:text-base">Gratis Rawat &amp; Pakan</span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Hewan dirawat di kandang transit Kulon Progo sampai serah terima.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="font-bold text-slate-900 block text-sm sm:text-base">Pilih Fisik di H-45</span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Penabung bebas memilih kandidat kambing ber-Ear Tag resmi.</p>
-                </div>
-
-                <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
-                  <span className="font-bold text-slate-900 block text-sm sm:text-base">Jaminan Saldo Amanah</span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">Jika kendala setoran, saldo bisa ganti kelas, rollover, atau refund.</p>
-                </div>
-              </div>
-
-              {/* Catatan Sapi */}
-              <p className="text-xs sm:text-sm text-slate-500 italic">
-                * Hewan sapi saat ini dilayani pemesanan langsung tunai (Full Cash) atau pengadaan panitia masjid.
-              </p>
-
-              {/* Tombol Aksi WhatsApp */}
-              <div className="pt-2">
-                <a
-                  href="https://wa.me/6285162581872?text=Halo%20Admin%20CV%20Joglo%20Makmur%2C%20saya%20ingin%20konsultasi%20Program%20Tabungan%20Qurban%20Kambing"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-[#15803d] hover:bg-[#14532d] text-white font-bold text-sm sm:text-base shadow-md hover:shadow-lg transition cursor-pointer"
-                >
-                  <PhoneCall className="w-5 h-5" />
-                  <span>Mulai Tabungan via WhatsApp</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* ==================================================================== */}
       {/* MODAL DETAIL 4: QURBAN PRAKTIS (PELOSOK DIY & JATENG)                */}

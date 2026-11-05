@@ -249,7 +249,7 @@ export default function KontakPage() {
                           Pemesanan Qurban &amp; Aqiqah
                         </h4>
                         <p className="text-xs text-slate-500 mt-0.5">
-                          Ternak hidup, tabungan kurban &amp; fasilitas titip rawat gratis
+                          Ternak hidup cash &amp; fasilitas titip rawat gratis hingga Hari H
                         </p>
                       </div>
                     </div>

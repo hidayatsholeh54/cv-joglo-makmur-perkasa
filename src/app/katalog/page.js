@@ -48,6 +48,7 @@ function KatalogContent() {
   const products = useAppStore((s) => s.products);
 
   const [categoryFilter, setCategoryFilter] = useState("ALL");
+  const [susuTypeFilter, setSusuTypeFilter] = useState("ALL"); // 'ALL' | 'SUSU_BUBUK' | 'SUSU_CAIR'
   const [searchQuery, setSearchQuery] = useState("");
   const [qtyMap, setQtyMap] = useState({});
 
@@ -89,12 +90,14 @@ function KatalogContent() {
     return matchCategory && matchSearch;
   });
 
-  // Filter Susu BPOM
+  // Filter Susu (Bubuk & Cair)
   const filteredProducts = products.filter((p) => {
-    return (
+    const matchType =
+      susuTypeFilter === "ALL" || p.product_type === susuTypeFilter;
+    const matchSearch =
       p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      p.bpom_number.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+      p.bpom_number.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchType && matchSearch;
   });
 
   const generateWhatsAppLink = (item, type) => {
@@ -115,10 +118,10 @@ function KatalogContent() {
           {/* Header Katalog Ringkas Langsung ke Produk */}
           <div className="max-w-3xl space-y-2">
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Katalog Ternak &amp; Susu Kambing BPOM
+              Katalog Ternak &amp; Susu Kambing Murni
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Pilihan hewan qurban, bibit ternak, dan susu kambing etawa BPOM siap kirim dari sentra Kulon Progo.
+              Pilihan resmi hewan qurban &amp; aqiqah syar&apos;i, bibit ternak, susu bubuk BPOM, serta susu murni segar siap kirim dari sentra Kulon Progo.
             </p>
           </div>
 
@@ -171,7 +174,20 @@ function KatalogContent() {
 
             {/* Filter Jenis Ternak & Search Bar Terpadu */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-              {activeTab !== "SUSU" && (
+              {activeTab === "SUSU" ? (
+                <div className="relative">
+                  <select
+                    value={susuTypeFilter}
+                    onChange={(e) => setSusuTypeFilter(e.target.value)}
+                    className="w-full sm:w-auto appearance-none pl-3 pr-8 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-semibold text-slate-700 focus:outline-none focus:border-[#15803d] cursor-pointer"
+                  >
+                    <option value="ALL">Semua Varian Susu</option>
+                    <option value="SUSU_BUBUK">Susu Bubuk BPOM (Milkku)</option>
+                    <option value="SUSU_CAIR">Susu Murni Segar / Cair</option>
+                  </select>
+                  <ChevronDown className="w-3.5 h-3.5 text-slate-400 absolute right-2.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
+              ) : (
                 <div className="relative">
                   <select
                     value={categoryFilter}
@@ -259,11 +275,15 @@ function KatalogContent() {
                             className={`px-3 py-1 rounded-full text-xs font-extrabold shadow-sm ${
                               isSoldOut
                                 ? "bg-red-600 text-white"
+                                : item.available_qty <= 5
+                                ? "bg-amber-600 text-white"
                                 : "bg-white/95 text-[#15803d]"
                             }`}
                           >
                             {isSoldOut
                               ? "HABIS"
+                              : item.available_qty <= 5
+                              ? `Sisa ${item.available_qty} Ekor`
                               : `Tersedia: ${item.available_qty} Ekor`}
                           </span>
                         </div>
@@ -281,7 +301,14 @@ function KatalogContent() {
                       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                         <div className="space-y-2">
                           <div className="flex items-center justify-between text-xs font-bold text-slate-400">
-                            <span>{item.breed}</span>
+                            <div className="flex items-center gap-1.5 flex-wrap">
+                              <span>{item.breed}</span>
+                              {item.inventory_mode === "INDIVIDUAL_QR" && item.eartag_code && (
+                                <span className="text-[10px] font-bold text-[#15803d] bg-emerald-50 border border-emerald-200/80 px-1.5 py-0.5 rounded">
+                                  🏷️ {item.eartag_code}
+                                </span>
+                              )}
+                            </div>
                             <span className="text-emerald-900 font-extrabold bg-emerald-50 border border-emerald-200/80 px-2 py-0.5 rounded-md">
                               Berat: {item.weight_range_label}
                             </span>
@@ -349,6 +376,28 @@ function KatalogContent() {
                   );
                 })}
               </div>
+            </div>
+          )}
+
+          {/* ============================================================== */}
+          {/* BANNER SEKSI SUSU KAMBING (KHUSUS TAB SEMUA KOLEKSI)           */}
+          {/* ============================================================== */}
+          {activeTab === "ALL" && (
+            <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/80 border border-emerald-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
+              <div className="space-y-0.5">
+                <span className="font-extrabold text-emerald-950 uppercase tracking-wider text-[11px] block">
+                  ✨ Hilirisasi Produk Susu Bernutrisi
+                </span>
+                <p className="text-emerald-800">
+                  Susu kambing etawa bubuk BPOM &amp; susu murni cair segar sentra Samigaluh dengan garansi rantai dingin.
+                </p>
+              </div>
+              <button
+                onClick={() => setActiveTab("SUSU")}
+                className="px-4 py-2 rounded-full bg-[#15803d] text-white font-bold hover:bg-[#14532d] transition shrink-0 cursor-pointer shadow-xs"
+              >
+                Lihat Khusus Produk Susu →
+              </button>
             </div>
           )}
 

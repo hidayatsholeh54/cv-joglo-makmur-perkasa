@@ -70,7 +70,8 @@ export const siteConfig = {
       desc: "Unit hilirisasi produk susu kambing bernutrisi tinggi serta pusat kunjungan studi banding dinas peternakan, pemda, dan universitas.",
       hasDetailPage: false,
       points: [
-        "Susu Kambing Bubuk (Terdaftar Resmi)",
+        "Susu Kambing Bubuk BPOM (Milkku 250g)",
+        "Susu Kambing Cair Segar & Frozen (Suplai Cafe & Depot)",
         "Es Krim Susu Kambing (Fokus Riset & Edukasi)",
         "Paket Kunjungan Studi / Praktek Lapangan"
       ]

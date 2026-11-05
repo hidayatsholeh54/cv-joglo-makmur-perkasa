@@ -413,6 +413,56 @@ export const INITIAL_PRODUCTS = [
     is_best_seller: false,
     is_active: true,
   },
+  {
+    id: "prod-milk-cair-1",
+    slug: "susu-kambing-etawa-cair-murni-1-liter",
+    name: "Susu Kambing Etawa Cair Murni (1 Liter) — Segar / Frozen Food Grade",
+    short_label: "SUSU CAIR (1 LITER)",
+    product_type: "SUSU_CAIR",
+    bpom_number: "Perahan Harian Samigaluh",
+    weight_grams: 1000,
+    boxes_count: 1,
+    base_cost_rp: 20000,
+    sell_price_rp: 35000,
+    strike_price_rp: 45000,
+    stock_qty: 60,
+    badge: "Murni Segar 100%",
+    image_url:
+      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80",
+    gallery_urls: [
+      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?auto=format&fit=crop&w=800&q=80",
+    ],
+    benefit_note:
+      "Susu kambing murni segar perahan harian Samigaluh Kulon Progo. Tersedia beku (frozen) steril maupun dingin tanpa campuran air/pengawet. Gurih alami tanpa bau prengus.",
+    is_best_seller: true,
+    is_active: true,
+  },
+  {
+    id: "prod-milk-cair-2",
+    slug: "paket-suplai-susu-cair-cafe-10-liter",
+    name: "Paket Kemitraan Suplai Susu Cair Murni (10 Liter) — Khusus Cafe & Depot",
+    short_label: "GROSIR CAFE (10 LITER)",
+    product_type: "SUSU_CAIR",
+    bpom_number: "Kemitraan Suplai Rantai Dingin",
+    weight_grams: 10000,
+    boxes_count: 10,
+    base_cost_rp: 180000,
+    sell_price_rp: 280000,
+    strike_price_rp: 350000,
+    stock_qty: 25,
+    badge: "Pilihan Cafe & Depot",
+    image_url:
+      "https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?auto=format&fit=crop&w=800&q=80",
+    gallery_urls: [
+      "https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80",
+    ],
+    benefit_note:
+      "Paket suplai rutin terjadwal untuk kedai kopi (Goat Milk Coffee / Latte), depot susu murni, steling jamu, dan industri kosmetik kefir. Pengiriman cold chain steril wilayah DIY.",
+    is_best_seller: false,
+    is_active: true,
+  },
 ];
 
 export const INITIAL_ORDERS = [

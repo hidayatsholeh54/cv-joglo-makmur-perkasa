@@ -22,18 +22,28 @@ import {
   ChevronDown,
   X,
   HelpCircle,
+  Milk,
+  Droplets,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function PartnerPage() {
-  const [modalType, setModalType] = useState(null); // 'RESELLER' | 'JOGLO_HUB' | 'QURBAN_PRAKTIS'
+  const [modalType, setModalType] = useState(null); // 'RESELLER' | 'SUSU_CAIR' | 'JOGLO_HUB' | 'QURBAN_PRAKTIS'
   const [openFaq, setOpenFaq] = useState(0); // FAQ Accordion State (default open item 0)
 
   const partnerFaqs = [
     {
-      q: "Berapa modal awal reseller Susu Kambing BPOM dan apakah ada target penjualan?",
+      q: "Apa perbedaan antara Kemitraan Susu Bubuk BPOM dan Susu Cair Murni?",
+      a: "Susu Bubuk (Milkku 250g) berizin resmi BPOM RI MD & Halal MUI dengan daya simpan panjang tanpa kulkas, ditujukan untuk reseller, apotek, toko herbal, dan pengiriman ke seluruh Indonesia. Sedangkan Susu Cair adalah susu segar/frozen murni perahan harian langsung dari kandang Samigaluh dengan rantai dingin (cold chain), ditujukan untuk suplai cafe (latte), depot susu, perajin kefir/sabun, dan langganan harian keluarga di area Yogyakarta & sekitarnya.",
+    },
+    {
+      q: "Berapa modal awal reseller Susu Kambing Bubuk BPOM?",
       a: "Modal awal sangat terjangkau mulai 10 bungkus Milkku 250g langsung dengan harga modal mitra. Tanpa biaya registrasi, tanpa target bulanan, dan langsung disediakan bahan foto estetik serta video promosi siap posting.",
+    },
+    {
+      q: "Bagaimana sistem suplai dan minimal order Susu Kambing Cair?",
+      a: "Susu cair tersedia dalam kemasan 1 Liter beku (frozen steril) maupun segar dingin. Minimal order mitra cafe, kedai kopi, atau depot mulai 5 – 10 Liter dengan opsi pengiriman terjadwal menggunakan packaging rantai dingin.",
     },
     {
       q: "Bagaimana skema pendampingan dan jaminan panen Kemitraan Kandang?",
@@ -70,18 +80,18 @@ export default function PartnerPage() {
               Program Kemitraan Terpadu
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
-              Bergabung bersama ekosistem terpadu kami: peluang usaha reseller susu BPOM berulang, pemberdayaan peternak rakyat binaan (plasma), hingga penyaluran daging qurban tepat sasaran di pelosok Nusantara.
+              Bergabung bersama ekosistem terpadu kami: kemitraan reseller susu bubuk BPOM, suplai susu murni cair perahan segar, pemberdayaan peternak binaan (plasma), hingga penyaluran daging qurban tepat sasaran.
             </p>
           </div>
 
-          {/* 3 KARTU KEMITRAAN SIMETRIS DAN RESPONSIF */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-stretch">
-            {/* KARTU 1: RESELLER & AGEN SUSU BPOM (Peluang Usaha Rutin) */}
+          {/* 4 KARTU KEMITRAAN SIMETRIS DAN RESPONSIF */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 items-stretch">
+            {/* KARTU 1: RESELLER & AGEN SUSU BUBUK BPOM */}
             <div
               onClick={() => setModalType("RESELLER")}
               className="rounded-[28px] p-6 bg-white border-2 border-emerald-600/30 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 bg-[#15803d] text-white text-xs font-extrabold px-3 py-1 rounded-bl-xl tracking-wider">
+              <div className="absolute top-0 right-0 bg-[#15803d] text-white text-[11px] font-extrabold px-3 py-1 rounded-bl-xl tracking-wider">
                 CASHFLOW RUTIN
               </div>
 
@@ -92,13 +102,13 @@ export default function PartnerPage() {
 
                 <div className="space-y-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-[#15803d] block">
-                    01 • HILIRISASI PRODUK
+                    01 • SUSU BUBUK BPOM
                   </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#15803d] transition-colors">
-                    Program Susu Kambing Murni
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 group-hover:text-[#15803d] transition-colors leading-snug">
+                    Susu Bubuk BPOM
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Peluang usaha susu etawa Milkku 250g (BPOM &amp; Halal). Modal ringan mulai 10 pcs, margin tebal, materi promosi harian siap pakai.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Peluang usaha susu etawa bubuk Milkku 250g (BPOM MD &amp; Halal). Modal 10 pcs, margin tebal, materi promosi siap pakai.
                   </p>
                 </div>
               </div>
@@ -113,7 +123,44 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            {/* KARTU 2: KEMITRAAN KANDANG */}
+            {/* KARTU 2: SUPLAI SUSU KAMBING CAIR MURNI */}
+            <div
+              onClick={() => setModalType("SUSU_CAIR")}
+              className="rounded-[28px] p-6 bg-white border-2 border-blue-600/30 hover:border-blue-700 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
+            >
+              <div className="absolute top-0 right-0 bg-blue-700 text-white text-[11px] font-extrabold px-3 py-1 rounded-bl-xl tracking-wider">
+                SUPLAI CAFE &amp; DEPOT
+              </div>
+
+              <div className="space-y-4">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 group-hover:scale-105 transition-transform">
+                  <Droplets className="w-6 h-6" />
+                </div>
+
+                <div className="space-y-2">
+                  <span className="text-xs font-extrabold uppercase tracking-wider text-blue-700 block">
+                    02 • SUSU SEGAR CAIR
+                  </span>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 group-hover:text-blue-700 transition-colors leading-snug">
+                    Susu Cair Murni
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Suplai susu murni segar &amp; frozen steril perahan harian Samigaluh. Solusi cafe (goat latte), depot susu, &amp; herbalis.
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 mt-4 border-t border-slate-100">
+                <div className="w-full flex items-center justify-between text-xs sm:text-sm font-extrabold uppercase tracking-wider text-blue-700 group-hover:text-blue-900">
+                  <span>PELAJARI SUPLAI</span>
+                  <div className="w-8 h-8 rounded-full bg-blue-50 group-hover:bg-blue-600 group-hover:text-white flex items-center justify-center transition-colors">
+                    <ArrowUpRight className="w-4 h-4 text-blue-700 group-hover:text-white transition-colors" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* KARTU 3: KEMITRAAN KANDANG (BINAAN RAKYAT) */}
             <div
               onClick={() => setModalType("JOGLO_HUB")}
               className="rounded-[28px] p-6 bg-white border-2 border-slate-200 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group cursor-pointer"
@@ -125,13 +172,13 @@ export default function PartnerPage() {
 
                 <div className="space-y-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-amber-700 block">
-                    02 • BINAAN RAKYAT
+                    03 • BINAAN RAKYAT
                   </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
                     Kemitraan Kandang
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Pemberdayaan peternak binaan. Suplai bibit unggul, pakan fermentasi tanpa ngarit, serta kepastian 100% serap panen (offtaker).
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Pemberdayaan peternak binaan. Suplai bibit unggul, pakan fermentasi tanpa ngarit, serta kepastian 100% serap panen.
                   </p>
                 </div>
               </div>
@@ -146,7 +193,7 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            {/* KARTU 3: QURBAN PRAKTIS (PELOSOK DIY & JAWA TENGAH) */}
+            {/* KARTU 4: QURBAN PRAKTIS (DISTRIBUSI SOSIAL) */}
             <div
               onClick={() => setModalType("QURBAN_PRAKTIS")}
               className="rounded-[28px] p-6 bg-white border-2 border-slate-200 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group cursor-pointer"
@@ -158,13 +205,13 @@ export default function PartnerPage() {
 
                 <div className="space-y-2">
                   <span className="text-xs font-extrabold uppercase tracking-wider text-[#ea580c] block">
-                    03 • DISTRIBUSI SOSIAL
+                    04 • DISTRIBUSI SOSIAL
                   </span>
-                  <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#ea580c] transition-colors">
+                  <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 group-hover:text-[#ea580c] transition-colors leading-snug">
                     Qurban Praktis
                   </h3>
-                  <p className="text-sm text-slate-600 leading-relaxed">
-                    Qurban praktis syar&apos;i disalurkan langsung ke daerah minus daging pelosok Menoreh &amp; Gunungkidul lengkap video laporan atas nama Anda.
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Qurban praktis syar&apos;i disalurkan langsung ke wilayah minus daging Menoreh &amp; Gunungkidul lengkap video personal.
                   </p>
                 </div>
               </div>
@@ -431,6 +478,142 @@ export default function PartnerPage() {
                 >
                   <PhoneCall className="w-5 h-5" />
                   <span>Minta Pricelist &amp; Daftar via WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ==================================================================== */}
+      {/* MODAL DETAIL: KEMITRAAN SUPLAI SUSU KAMBING CAIR MURNI               */}
+      {/* ==================================================================== */}
+      {modalType === "SUSU_CAIR" && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 overflow-hidden"
+          onClick={() => setModalType(null)}
+        >
+          {/* Backdrop Transparan Gelap */}
+          <div
+            className="fixed inset-0 bg-slate-900/60 backdrop-blur-xs transition-opacity cursor-pointer"
+            aria-hidden="true"
+          />
+
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative bg-white rounded-3xl sm:rounded-4xl max-w-2xl w-full max-h-[90vh] flex flex-col shadow-2xl border border-slate-100 z-10 animate-in fade-in zoom-in-95 duration-200 overflow-hidden"
+          >
+            {/* Visual Hero Header */}
+            <div className="relative h-48 sm:h-52 w-full bg-slate-900 overflow-hidden shrink-0">
+              <img
+                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=1200&q=80"
+                alt="Susu Kambing Cair Murni Segar Samigaluh"
+                className="w-full h-full object-cover object-center opacity-85"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-slate-950/35 to-black/30" />
+
+              {/* Badge Mengambang */}
+              <div className="absolute bottom-4 left-5 sm:left-6 flex flex-wrap gap-2">
+                <span className="px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-blue-800 text-xs sm:text-[13px] font-extrabold shadow-sm flex items-center gap-1.5">
+                  <Droplets className="w-4 h-4 text-blue-600" />
+                  <span>100% Segar &amp; Frozen Murni</span>
+                </span>
+                <span className="px-3 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-xs text-white text-xs sm:text-[13px] font-semibold">
+                  Perahan Harian Samigaluh
+                </span>
+              </div>
+
+              {/* Tombol X Mengambang */}
+              <button
+                onClick={() => setModalType(null)}
+                aria-label="Tutup"
+                className="absolute top-4 right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-slate-700 hover:text-slate-900 flex items-center justify-center transition shadow-md cursor-pointer backdrop-blur-xs z-10"
+              >
+                <X className="w-5 h-5 stroke-[2.5]" />
+              </button>
+            </div>
+
+            {/* Isi Konten */}
+            <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
+              <div>
+                <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-blue-700 block">
+                  SUPLAI RUTIN &amp; BISNIS KULINER
+                </span>
+                <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+                  Kemitraan Susu Kambing Cair Murni
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
+                  Penyediaan susu kambing etawa cair segar dan beku (frozen steril) perahan harian dari sentra Samigaluh, Kulon Progo. Gurih alami tanpa bau prengus, kaya enzim aktif, siap suplai rutin terjadwal.
+                </p>
+              </div>
+
+              {/* 4 Sasaran Kemitraan (Grid 2x2 Elegan) */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
+                    <Store className="w-4.5 h-4.5 text-blue-600 shrink-0" />
+                    <span>Cafe &amp; Coffee Shop</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Bahan baku menu specialty Goat Milk Latte &amp; Matcha yang creamy alami dan bernilai jual premium.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
+                    <Droplets className="w-4.5 h-4.5 text-blue-600 shrink-0" />
+                    <span>Depot Susu &amp; Jamu</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Pasokan rutin harian/mingguan untuk kedai minuman kesehatan, steling jamu, dan kuliner tradisional.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
+                    <Sparkles className="w-4.5 h-4.5 text-blue-600 shrink-0" />
+                    <span>Industri Kefir &amp; Kosmetik</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Bahan fermentasi masker kefir, sabun herbal etawa murni, dan formulasi perawatan kulit alami.
+                  </p>
+                </div>
+
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
+                  <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
+                    <ShieldCheck className="w-4.5 h-4.5 text-blue-600 shrink-0" />
+                    <span>Langganan Terapi Keluarga</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+                    Paket literan rutin untuk penderita asam lambung (GERD), asma/alergi, anak-anak, dan lansia.
+                  </p>
+                </div>
+              </div>
+
+              {/* Jaminan Kualitas Rantai Dingin */}
+              <div className="p-4 rounded-2xl bg-blue-50/70 border border-blue-100">
+                <span className="text-xs sm:text-sm font-bold text-blue-950 block mb-1.5">
+                  Standar Mutu &amp; Pengiriman Cold-Chain:
+                </span>
+                <div className="flex items-center justify-between text-xs sm:text-sm text-blue-900 font-semibold">
+                  <span>1. Perahan Higienis</span>
+                  <ChevronRight className="w-4 h-4 text-blue-400" />
+                  <span>2. Kemasan Steril &amp; Ice Pack</span>
+                  <ChevronRight className="w-4 h-4 text-blue-400" />
+                  <span>3. Antar Suhu Dingin</span>
+                </div>
+              </div>
+
+              {/* Tombol Aksi WhatsApp */}
+              <div className="pt-2">
+                <a
+                  href="https://wa.me/6285162581872?text=Halo%20Admin%20CV%20Joglo%20Makmur%2C%20saya%20tertarik%20Kemitraan%20Suplai%20Susu%20Kambing%20Cair%20Murni.%20Mohon%20info%20pricelist%20literan%20dan%20minimal%20ordernya."
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-full inline-flex items-center justify-center gap-2.5 py-4 px-6 rounded-full bg-[#15803d] hover:bg-[#14532d] text-white font-bold text-sm sm:text-base shadow-md hover:shadow-lg transition cursor-pointer"
+                >
+                  <PhoneCall className="w-5 h-5" />
+                  <span>Konsultasi Suplai Susu Cair via WhatsApp</span>
                 </a>
               </div>
             </div>

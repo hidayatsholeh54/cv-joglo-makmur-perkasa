@@ -275,10 +275,10 @@ export default function HomePage() {
                     02 • PRODUK HILIR &amp; GIZI
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Program Susu Kambing Murni
+                    Susu Bubuk BPOM &amp; Cair Segar
                   </h3>
                   <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Susu kambing etawa bubuk Milkku 250g (BPOM MD &amp; Halal). Gurih alami tanpa bau prengus, kaya kalsium &amp; ramah lambung.
+                    Susu bubuk Milkku 250g (BPOM MD &amp; Halal) dan susu murni cair segar/frozen perahan harian Samigaluh. Gurih alami tanpa bau prengus.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">

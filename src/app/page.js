@@ -35,6 +35,10 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
               {/* SISI KIRI: Headline & Value Proposition */}
               <div className="lg:col-span-6 space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
+                  <span>• PUSAT PETERNAKAN &amp; SUSU BPOM YOGYAKARTA</span>
+                </div>
+
                 <h1 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-slate-900 leading-[1.18]">
                   Pusat Hewan Qurban, Aqiqah &amp;{" "}
                   <span className="text-[#15803d]">Susu Kambing BPOM</span>
@@ -87,24 +91,24 @@ export default function HomePage() {
                       alt="Hewan Qurban & Aqiqah"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
-                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-900 text-[11px] sm:text-xs font-bold shadow-xs">
+                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5] shrink-0" />
                         <span className="truncate">Qurban &amp; Aqiqah</span>
                       </span>
                     </div>
                   </div>
 
                   {/* Foto 2: Susu Kambing Murni BPOM Milkku 250g (Kanan Atas) */}
-                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-50 shadow-sm border border-slate-100 group">
                     <img
                       src="/images/DSCF7005_hero.jpg?v=2"
                       alt="Susu Kambing Bubuk Murni BPOM RI"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
-                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-900 text-[11px] sm:text-xs font-bold shadow-xs">
+                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5] shrink-0" />
                         <span className="truncate">Susu Kambing BPOM</span>
                       </span>
                     </div>
@@ -117,9 +121,9 @@ export default function HomePage() {
                       alt="Pengadaan BUMDes & Instansi"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
-                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-900 text-[11px] sm:text-xs font-bold shadow-xs">
+                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5] shrink-0" />
                         <span className="truncate">Pengadaan BUMDes</span>
                       </span>
                     </div>
@@ -132,9 +136,9 @@ export default function HomePage() {
                       alt="Sentra Kandang Terpadu Kulon Progo"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
-                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
-                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5 sm:bottom-3 sm:left-3 sm:right-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-slate-900 text-[11px] sm:text-xs font-bold shadow-xs">
+                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5] shrink-0" />
                         <span className="truncate">Sentra Kandang DIY</span>
                       </span>
                     </div>

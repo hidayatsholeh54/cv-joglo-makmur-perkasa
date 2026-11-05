@@ -380,28 +380,6 @@ function KatalogContent() {
           )}
 
           {/* ============================================================== */}
-          {/* BANNER SEKSI SUSU KAMBING (KHUSUS TAB SEMUA KOLEKSI)           */}
-          {/* ============================================================== */}
-          {activeTab === "ALL" && (
-            <div className="p-4 sm:p-5 rounded-2xl bg-emerald-50/80 border border-emerald-100 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs">
-              <div className="space-y-0.5">
-                <span className="font-extrabold text-emerald-950 uppercase tracking-wider text-[11px] block">
-                  ✨ Hilirisasi Produk Susu Bernutrisi
-                </span>
-                <p className="text-emerald-800">
-                  Susu kambing etawa bubuk BPOM &amp; susu murni cair segar sentra Samigaluh dengan garansi rantai dingin.
-                </p>
-              </div>
-              <button
-                onClick={() => setActiveTab("SUSU")}
-                className="px-4 py-2 rounded-full bg-[#15803d] text-white font-bold hover:bg-[#14532d] transition shrink-0 cursor-pointer shadow-xs"
-              >
-                Lihat Khusus Produk Susu →
-              </button>
-            </div>
-          )}
-
-          {/* ============================================================== */}
           {/* SECTION SUSU KAMBING BPOM: BOX SERAGAM & RAPI                   */}
           {/* ============================================================== */}
           {(activeTab === "ALL" || activeTab === "SUSU") && (

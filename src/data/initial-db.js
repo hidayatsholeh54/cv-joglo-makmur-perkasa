@@ -203,7 +203,7 @@ export const INITIAL_LIVESTOCK_ITEMS = [
     sell_price_rp: 1750000,
     dp_price_rp: 875000,
     photo_main_url:
-      "https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1598449356475-b9f71db7d847?auto=format&fit=crop&w=900&q=80",
     is_pmk_free: true,
     vaccine_notes: "Fisik sehat bugar, amanah untuk aqiqah, nafsu makan baik, dan bebas cacat.",
     vet_name: null,

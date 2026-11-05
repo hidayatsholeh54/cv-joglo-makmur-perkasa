@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -9,6 +10,7 @@ import {
   Award,
   Sparkles,
   ChevronRight,
+  ChevronDown,
   HelpCircle,
   Building2,
   Truck,
@@ -21,6 +23,26 @@ import { useAppStore } from "@/store/useAppStore";
 
 export default function HomePage() {
   const partnerFarms = useAppStore((s) => s.partnerFarms);
+  const [openFaq, setOpenFaq] = useState(0);
+
+  const homeFaqs = [
+    {
+      q: "Apakah hewan qurban dan aqiqah dijamin sehat dan sah syariat?",
+      a: "Seluruh ternak dijamin 100% sehat, cukup umur (poel), bertanduk, dan bebas cacat fisik sesuai syarat sah syariat Islam. Kami memberikan garansi penggantian hewan sekelas secara gratis jika ditemukan hewan sakit sebelum serah terima.",
+    },
+    {
+      q: "Apakah Susu Kambing Etawa Joglo Makmur berbau prengus?",
+      a: "Sama sekali tidak berbau prengus. Susu diolah melalui teknologi modern yang menghilangkan aroma khas kambing tanpa mengurangi nutrisi alami. Rasanya gurih murni, lembut di tenggorokan, dan resmi berizin edar BPOM RI MD & Halal MUI.",
+    },
+    {
+      q: "Apakah pengiriman hewan ternak ke area DIY benar-benar gratis?",
+      a: "Ya, 100% gratis ongkir untuk seluruh wilayah Daerah Istimewa Yogyakarta (Bantul, Sleman, Kota Jogja, Kulon Progo, Gunungkidul). Armada pengiriman kami dilengkapi sekat longgar dan pakan agar hewan tiba dalam kondisi bugar dan tidak stres.",
+    },
+    {
+      q: "Bagaimana fasilitas titip rawat hewan qurban hingga Hari H?",
+      a: "Setiap pembelian hewan qurban (Full Cash maupun DP 50%) mendapatkan fasilitas titip rawat dan pakan berkualitas secara GRATIS di kandang transit Kulon Progo hingga jadwal pengantaran Hari H tiba tanpa biaya tambahan sepeser pun.",
+    },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-slate-900">
@@ -301,66 +323,59 @@ export default function HomePage() {
         </section>
 
         {/* ================================================================= */}
-        {/* 3. PERTANYAAN UMUM (FAQ) DALAM KOTAK-KOTAK RAPI                    */}
+        {/* 3. PERTANYAAN UMUM (FAQ) ACCORDION ELEGAN & PROFESIONAL           */}
         {/* ================================================================= */}
         <section id="faq" className="py-14 lg:py-20 bg-slate-50/60 border-b border-slate-100">
-          <div className="container-nusa">
-            <div className="max-w-2xl mb-8 lg:mb-10">
+          <div className="container-nusa max-w-4xl">
+            <div className="text-center max-w-2xl mx-auto mb-10">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
-                PERTANYAAN UMUM (FAQ)
+                TANYA JAWAB
               </span>
               <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mt-1">
-                Keterangan &amp; Pertanyaan Pembeli
+                Pertanyaan yang Sering Diajukan
               </h2>
               <p className="text-sm text-slate-600 mt-2">
-                Jawaban praktis seputar jaminan syariat, produk susu BPOM, pengantaran, hingga titip rawat.
+                Jawaban praktis seputar jaminan syariat, susu BPOM, pengantaran, hingga fasilitas titip rawat.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Q1: Qurban & Aqiqah Syariat */}
-              <div className="nusa-card p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Apakah hewan qurban dan aqiqah dijamin sehat dan sah syariat?</span>
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed pl-6">
-                  Seluruh ternak dijamin <strong>100% sehat, cukup umur (poel), bertanduk, dan bebas cacat fisik</strong> sesuai syarat sah syariat Islam. Kami memberikan garansi penggantian hewan sekelas secara gratis jika ditemukan hewan sakit sebelum serah terima.
-                </p>
-              </div>
-
-              {/* Q2: Susu Kambing BPOM */}
-              <div className="nusa-card p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Apakah Susu Kambing Etawa Joglo Makmur berbau prengus?</span>
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed pl-6">
-                  <strong>Sama sekali tidak berbau prengus.</strong> Susu diolah melalui teknologi modern yang menghilangkan aroma khas kambing tanpa mengurangi nutrisi alami. Rasanya gurih murni, lembut di tenggorokan, dan resmi berizin edar BPOM RI MD.
-                </p>
-              </div>
-
-              {/* Q3: Pengiriman DIY */}
-              <div className="nusa-card p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Apakah pengiriman hewan ternak ke area DIY benar-benar gratis?</span>
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed pl-6">
-                  <strong>Ya, 100% gratis ongkir</strong> untuk seluruh wilayah Daerah Istimewa Yogyakarta (Bantul, Sleman, Kota Jogja, Kulon Progo, Gunungkidul). Armada pengiriman kami dilengkapi sekat longgar dan pakan agar hewan tiba dalam kondisi bugar dan tidak stres.
-                </p>
-              </div>
-
-              {/* Q4: Titip Rawat & Paspor QR */}
-              <div className="nusa-card p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Bagaimana cara titip rawat dan pantau hewan qurban saya?</span>
-                </h4>
-                <p className="text-xs text-slate-600 leading-relaxed pl-6">
-                  Pembeli hewan qurban mendapatkan fasilitas <strong>titip rawat gratis hingga Hari H Idul Adha</strong>. Perkembangan fisik, riwayat penimbangan bobot, serta catatan kesehatan hewan dapat dipantau secara transparan melalui menu <strong>Cek Paspor QR</strong>.
-                </p>
-              </div>
+            <div className="space-y-3">
+              {homeFaqs.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl transition-all duration-200 border ${
+                      isOpen
+                        ? "bg-white border-[#15803d]/40 shadow-sm"
+                        : "bg-white/80 hover:bg-white border-slate-200/80 hover:border-slate-300"
+                    }`}
+                  >
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full py-4 sm:py-5 px-5 sm:px-6 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
+                    >
+                      <span className="font-heading font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                        {faq.q}
+                      </span>
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all ${
+                          isOpen
+                            ? "bg-[#15803d] text-white rotate-180"
+                            : "bg-slate-100 text-slate-500"
+                        }`}
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </div>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-1 animate-in fade-in duration-200">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>

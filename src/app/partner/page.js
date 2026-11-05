@@ -28,7 +28,26 @@ import Footer from "@/components/Footer";
 
 export default function PartnerPage() {
   const [modalType, setModalType] = useState(null); // 'RESELLER' | 'JOGLO_HUB' | 'QURBAN_PRAKTIS'
-  const [openFaq, setOpenFaq] = useState(null); // FAQ Accordion State
+  const [openFaq, setOpenFaq] = useState(0); // FAQ Accordion State (default open item 0)
+
+  const partnerFaqs = [
+    {
+      q: "Berapa modal awal reseller Susu Kambing BPOM dan apakah ada target penjualan?",
+      a: "Modal awal sangat terjangkau mulai 10 bungkus Milkku 250g langsung dengan harga modal mitra. Tanpa biaya registrasi, tanpa target bulanan, dan langsung disediakan bahan foto estetik serta video promosi siap posting.",
+    },
+    {
+      q: "Bagaimana skema pendampingan dan jaminan panen Kemitraan Kandang?",
+      a: "Mitra peternak disuplai bibit bakalan unggul dan pakan fermentasi kering (bebas beban ngarit). Tim mantri melakukan kontrol kesehatan rutin, dan seluruh hasil panen 100% dibeli tunai (offtaker) oleh CV.",
+    },
+    {
+      q: "Bagaimana sistem pembelian hewan qurban dan fasilitas titip rawat?",
+      a: "Pembelian dilakukan secara tunai (Full Cash) atau DP 50% untuk mengunci fisik dan nomor telinga (Ear Tag) hewan. Hewan dirawat dan diberi pakan berkualitas secara GRATIS di kandang Kulon Progo hingga hari H kirim.",
+    },
+    {
+      q: "Bagaimana bukti penyaluran dan laporan ibadah Qurban Praktis?",
+      a: "Shohibul qurban menerima dokumentasi video personal saat penyembelihan melafalkan nama Anda, video serah terima ke warga dhuafa pelosok Menoreh & Gunungkidul, serta sertifikat resmi.",
+    },
+  ];
 
   // Tutup modal otomatis saat tombol Escape ditekan
   useEffect(() => {
@@ -202,64 +221,57 @@ export default function PartnerPage() {
             </div>
           </div>
 
-          {/* SEKSI 3: PERTANYAAN UMUM CALON MITRA (FAQ - SERAGAM MODEL GRID ALA HOMEPAGE) */}
-          <div className="space-y-4 pt-2">
+          {/* SEKSI 3: PERTANYAAN UMUM CALON MITRA (ACCORDION PROFESIONAL) */}
+          <div className="space-y-6 pt-4">
             <div className="max-w-2xl">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d] block mb-1">
-                PERTANYAAN UMUM (FAQ)
+                TANYA JAWAB MITRA
               </span>
               <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900">
-                Keterangan &amp; Tanya Jawab Kemitraan
+                Pertanyaan yang Sering Diajukan
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
-                Jawaban praktis seputar syarat reseller, pendampingan ternak plasma, pemesanan qurban cash, hingga distribusi sosial.
+                Keterangan praktis seputar syarat kemitraan susu, ternak binaan, qurban cash, hingga distribusi sosial.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Q1: Reseller Susu BPOM */}
-              <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Berapa modal awal dan apakah ada target penjualan bulanan?</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
-                  Modal awal <strong>sangat terjangkau mulai 10 bungkus</strong> Milkku 250g langsung dengan harga modal mitra. Tanpa biaya registrasi, tanpa target penjualan bulanan, dan langsung disediakan bahan foto estetik serta video khasiat harian di grup WhatsApp.
-                </p>
-              </div>
-
-              {/* Q2: Kemitraan Kandang */}
-              <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Bagaimana skema pendampingan dan jaminan panen Kemitraan Kandang?</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
-                  Mitra peternak disuplai bibit bakalan lolos cek dokter hewan dan <strong>pakan konsentrat fermentasi kering</strong> (bebas beban ngarit). Tim mantri kandang melakukan kontrol kesehatan rutin, dan seluruh hasil panen <strong>100% dibeli tunai (offtaker)</strong> oleh CV.
-                </p>
-              </div>
-
-              {/* Q3: Pembelian Qurban Cash & DP */}
-              <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Bagaimana sistem pembelian hewan qurban dan fasilitas titip rawat?</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
-                  Pembelian dilakukan secara <strong>tunai (Full Cash) atau DP 50%</strong> untuk mengunci fisik dan nomor telinga (Ear Tag) hewan. Hewan dirawat dan diberi pakan berkualitas secara <strong>GRATIS di kandang Samigaluh Kulon Progo</strong> hingga jadwal kirim Hari H tanpa biaya tambahan.
-                </p>
-              </div>
-
-              {/* Q4: Qurban Praktis Pelosok */}
-              <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
-                <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
-                  <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Bagaimana bukti penyaluran dan laporan ibadah Qurban Praktis?</span>
-                </h4>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
-                  Shohibul qurban menerima <strong>dokumentasi video personal</strong> saat penyembelihan melafalkan nama Anda, video serah terima ke warga dhuafa pelosok Menoreh &amp; Gunungkidul, serta <strong>Sertifikat Digital resmi ber-QR Code</strong>.
-                </p>
-              </div>
+            <div className="space-y-3 max-w-4xl">
+              {partnerFaqs.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl transition-all duration-200 border ${
+                      isOpen
+                        ? "bg-white border-[#15803d]/40 shadow-sm"
+                        : "bg-white/80 hover:bg-white border-slate-200/80 hover:border-slate-300"
+                    }`}
+                  >
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full py-4 sm:py-5 px-5 sm:px-6 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
+                    >
+                      <span className="font-heading font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                        {faq.q}
+                      </span>
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all ${
+                          isOpen
+                            ? "bg-[#15803d] text-white rotate-180"
+                            : "bg-slate-100 text-slate-500"
+                        }`}
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </div>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-1 animate-in fade-in duration-200">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

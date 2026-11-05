@@ -21,11 +21,29 @@ import {
   MessageCircle,
   Clock,
   Compass,
+  ChevronDown,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export default function PengadaanPage() {
+  const [openFaq, setOpenFaq] = useState(0);
+
+  const procurementFaqs = [
+    {
+      q: "Bisakah survei langsung ke kandang sebelum pemesanan pengadaan?",
+      a: "Sangat bisa dan dipersilakan. Sentra peternakan terpadu kami di Samigaluh, Kulon Progo terbuka untuk peninjauan langsung melihat fasilitas kandang, tata kelola perawatan hewan, serta ketersediaan populasi ternak kami.",
+    },
+    {
+      q: "Bagaimana jika terjadi kematian atau susut berlebih di perjalanan?",
+      a: "Kami memberikan garansi penggantian ternak utuh 100% jika ditemukan hewan sakit berat atau mati saat proses serah terima fisik di titik kumpul tujuan pengantaran, didampingi berita acara bersama.",
+    },
+    {
+      q: "Apakah sistem pembayaran bisa bertahap (termin) sesuai SPK?",
+      a: "Bisa disesuaikan. Kami memfasilitasi skema pembayaran bertahap (termin) sesuai kesepakatan Surat Perjanjian Kerja (SPK) resmi BUMDes, dinas, maupun rekanan korporat.",
+    },
+  ];
+
   // 4 Komoditas Ternak Skala Besar Lengkap dengan Foto Asli
   const komoditasPengadaan = [
     {
@@ -315,54 +333,55 @@ export default function PengadaanPage() {
           </div>
 
           {/* ============================================================== */}
-          {/* 6. PERTANYAAN PENTING SEPUTAR PENGADAAN (FAQ TEKNIS)           */}
+          {/* 6. PERTANYAAN PENTING SEPUTAR PENGADAAN (ACCORDION PROFESIONAL)*/}
           {/* ============================================================== */}
-          <div className="space-y-4">
+          <div className="space-y-4 pt-2">
             <div>
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
                 KETENTUAN KERJASAMA
               </span>
               <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 mt-1">
-                Pertanyaan Penting Seputar Pengadaan &amp; Kemitraan
+                Pertanyaan Penting Seputar Pengadaan &amp; Proyek
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-[#15803d] flex items-center justify-center font-black text-sm">
-                  1
-                </div>
-                <h3 className="font-bold text-slate-900 text-sm leading-snug">
-                  Bisakah survei langsung ke kandang sebelum memesan?
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Sangat bisa dan dipersilakan. Sentra peternakan terpadu kami di Samigaluh, Kulon Progo terbuka untuk peninjauan langsung melihat fasilitas kandang, tata kelola perawatan hewan, serta ketersediaan populasi ternak kami.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-[#15803d] flex items-center justify-center font-black text-sm">
-                  2
-                </div>
-                <h3 className="font-bold text-slate-900 text-sm leading-snug">
-                  Bagaimana jika terjadi kematian atau susut berlebih di perjalanan?
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Kami memberikan garansi penggantian ternak utuh 100% jika ditemukan hewan sakit berat atau mati saat proses serah terima fisik di titik kumpul tujuan pengantaran, didampingi berita acara bersama.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-3xl border border-slate-200/80 shadow-xs space-y-3">
-                <div className="w-9 h-9 rounded-xl bg-emerald-50 text-[#15803d] flex items-center justify-center font-black text-sm">
-                  3
-                </div>
-                <h3 className="font-bold text-slate-900 text-sm leading-snug">
-                  Apakah sistem pembayaran bisa bertahap (termin) sesuai SPK?
-                </h3>
-                <p className="text-xs text-slate-600 leading-relaxed">
-                  Bisa disesuaikan. Kami memfasilitasi skema pembayaran bertahap (termin) sesuai kesepakatan Surat Perjanjian Kerja (SPK) resmi BUMDes, dinas, maupun rekanan korporat.
-                </p>
-              </div>
+            <div className="space-y-3 max-w-4xl">
+              {procurementFaqs.map((faq, idx) => {
+                const isOpen = openFaq === idx;
+                return (
+                  <div
+                    key={idx}
+                    className={`rounded-2xl transition-all duration-200 border ${
+                      isOpen
+                        ? "bg-white border-[#15803d]/40 shadow-sm"
+                        : "bg-white/80 hover:bg-white border-slate-200/80 hover:border-slate-300"
+                    }`}
+                  >
+                    <button
+                      onClick={() => setOpenFaq(isOpen ? null : idx)}
+                      className="w-full py-4 sm:py-5 px-5 sm:px-6 flex items-center justify-between text-left gap-4 cursor-pointer select-none"
+                    >
+                      <span className="font-heading font-bold text-slate-900 text-sm sm:text-base leading-snug">
+                        {faq.q}
+                      </span>
+                      <div
+                        className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 transition-all ${
+                          isOpen
+                            ? "bg-[#15803d] text-white rotate-180"
+                            : "bg-slate-100 text-slate-500"
+                        }`}
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </div>
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 sm:px-6 pb-5 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 mt-1 animate-in fade-in duration-200">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 

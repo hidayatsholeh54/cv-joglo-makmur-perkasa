@@ -120,18 +120,6 @@ function KatalogContent() {
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
               Pilihan hewan qurban, bibit ternak, dan susu kambing etawa BPOM siap kirim dari sentra Kulon Progo.
             </p>
-
-            {/* Live Inventory Counter Bar Ringkas */}
-            <div className="flex flex-wrap items-center gap-2 pt-0.5 text-xs">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Ready: {livestockItems.reduce((acc, i) => acc + (i.available_qty || 1), 0)} Ekor Ternak</span>
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-bold">
-                <ShieldCheck className="w-3.5 h-3.5 text-slate-500" />
-                <span>{products.reduce((acc, p) => acc + (p.stock_qty || 0), 0)} Pouch Susu BPOM</span>
-              </span>
-            </div>
           </div>
 
           {/* FILTER TOOLBAR TERPADU (1 BARIS BERSIH & MEWAH) */}

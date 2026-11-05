@@ -171,7 +171,7 @@ export default function PartnerPage() {
                 <div className="space-y-1">
                   <h4 className="font-bold text-slate-900 text-sm sm:text-base">Legalitas &amp; Mutu Terstandar</h4>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Susu bubuk berizin resmi BPOM RI MD &amp; Halal MUI. Hewan ternak ber-SKKH dokter hewan resmi dan bebas penyakit.
+                    Susu bubuk berizin resmi BPOM RI MD &amp; Halal MUI. Hewan ternak sehat terawat, bebas penyakit dan sesuai syariat.
                   </p>
                 </div>
               </div>

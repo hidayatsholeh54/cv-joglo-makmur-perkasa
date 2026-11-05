@@ -19,7 +19,7 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata = {
   title: "CV Joglo Makmur Perkasa | Ekosistem Peternakan Modern, Qurban & Susu Kambing BPOM",
   description:
-    "Pusat pengadaan ternak pemerintah (kambing & sapi ber-SKKH resmi), katalog Qurban & Aqiqah terverifikasi dokter hewan, kemitraan kandang rakyat, serta hilirisasi Susu Kambing Etawa Bubuk BPOM di Yogyakarta.",
+    "Pusat pengadaan ternak pemerintah (kambing & sapi sehat terawat), katalog Qurban & Aqiqah terverifikasi dokter hewan, kemitraan kandang rakyat, serta hilirisasi Susu Kambing Etawa Bubuk BPOM di Yogyakarta.",
   keywords: [
     "CV Joglo Makmur Perkasa",
     "Pengadaan Ternak Pemerintah",

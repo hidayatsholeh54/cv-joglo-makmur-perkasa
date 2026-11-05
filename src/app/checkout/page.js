@@ -441,7 +441,7 @@ function CheckoutContent() {
                 <span className="font-semibold text-[#15803d]">GRATIS (Rp 0)</span>
               </div>
               <div className="flex justify-between text-slate-600">
-                <span>Sertifikat Sehat / SKKH</span>
+                <span>Jaminan Ternak Sehat</span>
                 <span className="font-semibold text-[#15803d]">TERMASUK</span>
               </div>
               {isDp && (

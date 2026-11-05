@@ -340,7 +340,7 @@ function KatalogContent() {
                             <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100">
                               <CheckCircle2 className="w-3 h-3 text-[#15803d]" />
                               {item.inventory_mode === "INDIVIDUAL_QR"
-                                ? "SKKH Dokter Hewan"
+                                ? "Pemeriksaan Dokter Hewan"
                                 : "Garansi Sehat & Bebas Cacat"}
                             </span>
                           </div>
@@ -849,7 +849,7 @@ function KatalogContent() {
                       selectedDetail.item.vet_name ? (
                         <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-100 space-y-1">
                           <span className="text-[11px] font-bold text-slate-700 flex items-center gap-1.5">
-                            🩺 Cek Medis Veteriner &amp; SKKH Resmi:
+                            🩺 Cek Medis Veteriner &amp; Kesehatan:
                           </span>
                           <p className="text-xs text-slate-700 leading-relaxed font-medium">
                             {selectedDetail.item.vaccine_notes}{" "}
@@ -871,7 +871,7 @@ function KatalogContent() {
                               "Ternak dipelihara dengan pakan bernutrisi, kondisi aktif, lincah, dan nafsu makan baik. Garansi bebas cacat fisik."}
                           </p>
                           <p className="text-[11px] text-slate-400 font-medium">
-                            💡 Layanan pengurusan SKKH Dinas tersedia atas permintaan khusus (jika diperlukan untuk pengiriman luar daerah DIY atau pengadaan instansi).
+                            💡 Layanan pengurusan izin karantina dinas tersedia atas permintaan khusus jika diperlukan untuk pengiriman luar daerah atau instansi.
                           </p>
                         </div>
                       )}

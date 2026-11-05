@@ -198,9 +198,9 @@ export default function PengadaanPage() {
                 <div className="w-10 h-10 rounded-xl bg-purple-50 text-purple-700 flex items-center justify-center">
                   <FileCheck2 className="w-5 h-5" />
                 </div>
-                <h3 className="font-bold text-slate-900 text-sm">Pemeriksaan Medis &amp; SKKH</h3>
+                <h3 className="font-bold text-slate-900 text-sm">Pemeriksaan Medis &amp; Karantina Sehat</h3>
                 <p className="text-xs text-slate-600 leading-relaxed">
-                  Didampingi dokter hewan berwenang untuk penerbitan SKKH kolektif resmi dan izin lalu lintas ternak antarpulau.
+                  Didampingi dokter hewan berwenang untuk pemeriksaan kesehatan berkala dan dokumen izin lalu lintas ternak.
                 </p>
               </div>
             </div>

@@ -51,7 +51,7 @@ export default function LayananPage() {
               Layanan &amp; Standar Mutu Ternak
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Standar mutu ternak bergaransi, sertifikat kesehatan hewan (SKKH), dan garansi pengiriman aman se-DIY.
+              Standar mutu ternak bergaransi, kontrol kesehatan berkala, dan garansi pengiriman aman se-DIY.
             </p>
           </div>
 
@@ -76,12 +76,11 @@ export default function LayananPage() {
                 <FileCheck2 className="w-5 h-5" />
               </div>
               <h2 className="text-lg font-bold text-slate-900">
-                Pemeriksaan Medis &amp; Penerbitan SKKH
+                Pemeriksaan Medis &amp; Kontrol Kesehatan
               </h2>
               <p className="text-sm text-slate-500 mt-2 leading-relaxed">
                 Seluruh ternak melalui tahapan observasi fisik, pemberian
-                vitamin, vaksinasi PMK/Anthrax, dan tanda tangan Surat
-                Keterangan Kesehatan Hewan (SKKH).
+                vitamin, vaksinasi PMK, dan pemeriksaan berkala dokter hewan.
               </p>
             </div>
 

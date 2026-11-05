@@ -203,7 +203,7 @@ export default function LivestockQrPassportPage() {
                   <div className="nusa-card p-6 bg-white space-y-4">
                     <div className="flex items-center gap-2 text-[#15803d] font-extrabold text-xs uppercase tracking-wider">
                       <Stethoscope className="w-4 h-4" />
-                      <span>Otoritas Medis Veteriner &amp; SKKH</span>
+                      <span>Otoritas Medis Veteriner &amp; Kesehatan</span>
                     </div>
 
                     <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200">

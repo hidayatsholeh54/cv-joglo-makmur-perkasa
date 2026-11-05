@@ -70,7 +70,7 @@ export default function HomePage() {
                 {/* Indikator Trust Ringkas Ala NusaQu */}
                 <div className="pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600 border-t border-slate-100">
                   <span className="inline-flex items-center gap-1.5 font-medium">
-                    <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> 100% Syar&apos;i &amp; SKKH Dokter Hewan
+                    <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> 100% Syar&apos;i &amp; Sehat Terawat
                   </span>
                   <span className="inline-flex items-center gap-1.5 font-medium">
                     <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> Susu Murni BPOM RI MD
@@ -170,7 +170,7 @@ export default function HomePage() {
                   <Award className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="text-xs font-bold text-slate-900">SKKH Dokter Hewan</div>
+                  <div className="text-xs font-bold text-slate-900">Pemeriksaan Dokter Hewan</div>
                   <div className="text-[11px] text-slate-500">Pemeriksaan Bebas PMK &amp; Sehat</div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ export default function HomePage() {
                     Ternak Qurban &amp; Aqiqah
                   </h3>
                   <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Kambing, domba, &amp; sapi 100% syar&apos;i bersertifikat SKKH dokter hewan. Gratis titip rawat dan antar se-DIY.
+                    Kambing, domba, &amp; sapi 100% syar&apos;i dan sehat terawat. Gratis titip rawat dan antar se-DIY.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">

@@ -333,10 +333,10 @@ export default function PengadaanPage() {
           </div>
 
           {/* ============================================================== */}
-          {/* 6. PERTANYAAN PENTING SEPUTAR PENGADAAN (ACCORDION PROFESIONAL)*/}
+          {/* 6. PERTANYAAN PENTING SEPUTAR PENGADAAN                        */}
           {/* ============================================================== */}
-          <div className="space-y-8 pt-6 max-w-4xl mx-auto w-full">
-            <div className="text-center max-w-2xl mx-auto">
+          <div className="space-y-6 pt-6 border-t border-slate-200/80">
+            <div className="max-w-2xl">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
                 TANYA JAWAB PENGADAAN
               </span>

@@ -326,8 +326,8 @@ export default function HomePage() {
         {/* 3. PERTANYAAN UMUM (FAQ) ACCORDION ELEGAN & PROFESIONAL           */}
         {/* ================================================================= */}
         <section id="faq" className="py-14 lg:py-20 bg-slate-50/60 border-b border-slate-100">
-          <div className="container-nusa max-w-4xl">
-            <div className="text-center max-w-2xl mx-auto mb-10">
+          <div className="container-nusa">
+            <div className="max-w-2xl mb-8 sm:mb-10">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
                 TANYA JAWAB
               </span>

@@ -260,15 +260,15 @@ export default function PartnerPage() {
             </div>
           </div>
 
-          {/* SEKSI 3: PERTANYAAN UMUM CALON MITRA (ACCORDION PROFESIONAL) */}
-          <div className="space-y-8 pt-6 max-w-4xl mx-auto w-full">
-            <div className="text-center max-w-2xl mx-auto">
+          {/* SEKSI 3: PERTANYAAN UMUM CALON MITRA */}
+          <div className="space-y-6 pt-6 border-t border-slate-200/80">
+            <div className="max-w-2xl">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d] block mb-1">
                 TANYA JAWAB MITRA
               </span>
-              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
+              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                 Pertanyaan yang Sering Diajukan
-              </h3>
+              </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-2">
                 Keterangan praktis seputar syarat kemitraan susu, ternak binaan, qurban cash, hingga distribusi sosial.
               </p>

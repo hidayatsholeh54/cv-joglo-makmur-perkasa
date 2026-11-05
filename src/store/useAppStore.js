@@ -540,7 +540,7 @@ export const useAppStore = create(
       },
     }),
     {
-      name: "joglo-makmur-storage-v11",
+      name: "joglo-makmur-storage-v12",
     }
   )
 );

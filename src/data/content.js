@@ -71,7 +71,7 @@ export const siteConfig = {
       hasDetailPage: false,
       points: [
         "Susu Kambing Bubuk BPOM (Milkku 250g)",
-        "Susu Kambing Cair Segar & Frozen (Suplai Cafe & Depot)",
+        "Susu Kambing Cair Murni (Segar & Frozen)",
         "Es Krim Susu Kambing (Fokus Riset & Edukasi)",
         "Paket Kunjungan Studi / Praktek Lapangan"
       ]

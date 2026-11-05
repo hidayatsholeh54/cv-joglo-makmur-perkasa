@@ -883,13 +883,13 @@ function KatalogContent() {
                           <Sparkles className="w-3.5 h-3.5 text-emerald-700" />
                           <span>
                             {selectedDetail.item.product_type === "SUSU_CAIR"
-                              ? "Peluang Kemitraan Suplai Cafe & Depot"
+                              ? "Peluang Kemitraan Suplai Susu Cair"
                               : "Peluang Keagenan & Reseller BPOM"}
                           </span>
                         </div>
                         <p className="text-[11px] text-emerald-800">
                           {selectedDetail.item.product_type === "SUSU_CAIR"
-                            ? "Melayani pesanan rutin harian/mingguan untuk cafe, depot susu, dan industri dengan harga grosir serta pengemasan rantai dingin steril."
+                            ? "Melayani pemesanan rutin untuk kebutuhan usaha, kemitraan olahan, maupun konsumsi harian keluarga dengan pengemasan rantai dingin steril."
                             : "Melayani kemitraan reseller mulai 10 bungkus hingga agen kartonan dengan margin laba tebal dan materi promosi digital lengkap."}
                         </p>
                       </div>

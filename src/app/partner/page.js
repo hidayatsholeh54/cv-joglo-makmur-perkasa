@@ -35,7 +35,7 @@ export default function PartnerPage() {
   const partnerFaqs = [
     {
       q: "Apa perbedaan antara Kemitraan Susu Bubuk BPOM dan Susu Cair Murni?",
-      a: "Susu Bubuk (Milkku 250g) berizin resmi BPOM RI MD & Halal MUI dengan daya simpan panjang tanpa kulkas, ditujukan untuk reseller, apotek, toko herbal, dan pengiriman ke seluruh Indonesia. Sedangkan Susu Cair adalah susu segar/frozen murni perahan harian langsung dari kandang Samigaluh dengan rantai dingin (cold chain), ditujukan untuk suplai cafe (latte), depot susu, perajin kefir/sabun, dan langganan harian keluarga di area Yogyakarta & sekitarnya.",
+      a: "Susu Bubuk (Milkku 250g) berizin resmi BPOM RI MD & Halal MUI dengan daya simpan panjang tanpa kulkas, ditujukan untuk reseller, apotek, toko herbal, dan pengiriman ke seluruh Indonesia. Sedangkan Susu Cair adalah susu segar/frozen murni perahan harian langsung dari kandang Samigaluh dengan rantai dingin (cold chain), cocok untuk berbagai kebutuhan usaha olahan pangan/minuman maupun konsumsi rutin harian keluarga di area Yogyakarta & sekitarnya.",
     },
     {
       q: "Berapa modal awal reseller Susu Kambing Bubuk BPOM?",
@@ -43,7 +43,7 @@ export default function PartnerPage() {
     },
     {
       q: "Bagaimana sistem suplai dan minimal order Susu Kambing Cair?",
-      a: "Susu cair tersedia dalam kemasan 1 Liter beku (frozen steril) maupun segar dingin. Minimal order mitra cafe, kedai kopi, atau depot mulai 5 – 10 Liter dengan opsi pengiriman terjadwal menggunakan packaging rantai dingin.",
+      a: "Susu cair tersedia dalam kemasan 1 Liter beku (frozen steril) maupun segar dingin. Pemesanan fleksibel mulai satuan 1 Liter untuk konsumsi harian hingga paket 10 Liter untuk kebutuhan usaha dengan pengemasan rantai dingin steril.",
     },
     {
       q: "Bagaimana skema pendampingan dan jaminan panen Kemitraan Kandang?",
@@ -91,10 +91,6 @@ export default function PartnerPage() {
               onClick={() => setModalType("RESELLER")}
               className="rounded-[28px] p-6 bg-white border-2 border-emerald-600/30 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 bg-[#15803d] text-white text-[11px] font-extrabold px-3 py-1 rounded-bl-xl tracking-wider">
-                CASHFLOW RUTIN
-              </div>
-
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#15803d] group-hover:scale-105 transition-transform">
                   <Store className="w-6 h-6" />
@@ -128,10 +124,6 @@ export default function PartnerPage() {
               onClick={() => setModalType("SUSU_CAIR")}
               className="rounded-[28px] p-6 bg-white border-2 border-blue-600/30 hover:border-blue-700 transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group relative overflow-hidden cursor-pointer"
             >
-              <div className="absolute top-0 right-0 bg-blue-700 text-white text-[11px] font-extrabold px-3 py-1 rounded-bl-xl tracking-wider">
-                SUPLAI CAFE &amp; DEPOT
-              </div>
-
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 group-hover:scale-105 transition-transform">
                   <Droplets className="w-6 h-6" />
@@ -145,7 +137,7 @@ export default function PartnerPage() {
                     Susu Cair Murni
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Suplai susu murni segar &amp; frozen steril perahan harian Samigaluh. Solusi cafe (goat latte), depot susu, &amp; herbalis.
+                    Susu kambing murni segar &amp; frozen steril perahan harian Samigaluh. Cocok untuk usaha minuman, olahan gizi, maupun konsumsi rutin.
                   </p>
                 </div>
               </div>
@@ -401,7 +393,7 @@ export default function PartnerPage() {
             <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
               <div>
                 <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-[#15803d] block">
-                  PELUANG USAHA CASHFLOW RUTIN
+                  PELUANG USAHA RESELLER &amp; AGEN
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                   Kemitraan Reseller &amp; Agen Susu BPOM
@@ -537,7 +529,7 @@ export default function PartnerPage() {
             <div className="p-6 sm:p-8 overflow-y-auto space-y-6">
               <div>
                 <span className="text-xs sm:text-sm font-extrabold uppercase tracking-wider text-blue-700 block">
-                  SUPLAI RUTIN &amp; BISNIS KULINER
+                  SUPLAI RUTIN &amp; KEBUTUHAN UMUM
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
                   Kemitraan Susu Kambing Cair Murni
@@ -552,40 +544,40 @@ export default function PartnerPage() {
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
                   <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
                     <Store className="w-4.5 h-4.5 text-blue-600 shrink-0" />
-                    <span>Cafe &amp; Coffee Shop</span>
+                    <span>Usaha Kuliner &amp; Minuman</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Bahan baku menu specialty Goat Milk Latte &amp; Matcha yang creamy alami dan bernilai jual premium.
+                    Bahan baku minuman segar, kopi olahan, dan aneka racikan kuliner yang creamy gurih alami.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
                   <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
                     <Droplets className="w-4.5 h-4.5 text-blue-600 shrink-0" />
-                    <span>Depot Susu &amp; Jamu</span>
+                    <span>Mitra Usaha &amp; Gerai Pangan</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Pasokan rutin harian/mingguan untuk kedai minuman kesehatan, steling jamu, dan kuliner tradisional.
+                    Pasokan rutin harian/mingguan untuk aneka kedai minuman, toko herbal, dan gerai pangan sehat.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
                   <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
                     <Sparkles className="w-4.5 h-4.5 text-blue-600 shrink-0" />
-                    <span>Industri Kefir &amp; Kosmetik</span>
+                    <span>Industri Olahan &amp; Kosmetik</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Bahan fermentasi masker kefir, sabun herbal etawa murni, dan formulasi perawatan kulit alami.
+                    Bahan alami fermentasi masker kefir, sabun herbal etawa murni, dan formulasi perawatan kulit.
                   </p>
                 </div>
 
                 <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-1.5">
                   <div className="flex items-center gap-2 font-bold text-slate-900 text-sm sm:text-base">
                     <ShieldCheck className="w-4.5 h-4.5 text-blue-600 shrink-0" />
-                    <span>Langganan Terapi Keluarga</span>
+                    <span>Konsumsi &amp; Terapi Keluarga</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Paket literan rutin untuk penderita asam lambung (GERD), asma/alergi, anak-anak, dan lansia.
+                    Paket literan rutin untuk menjaga kebugaran tubuh, terapi lambung, anak-anak, dan lansia.
                   </p>
                 </div>
               </div>

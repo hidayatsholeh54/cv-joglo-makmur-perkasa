@@ -440,18 +440,18 @@ export const INITIAL_PRODUCTS = [
   },
   {
     id: "prod-milk-cair-2",
-    slug: "paket-suplai-susu-cair-cafe-10-liter",
-    name: "Paket Kemitraan Suplai Susu Cair Murni (10 Liter) — Khusus Cafe & Depot",
-    short_label: "GROSIR CAFE (10 LITER)",
+    slug: "paket-suplai-susu-cair-10-liter",
+    name: "Paket Suplai Susu Cair Murni (10 Liter) — Pilihan Hemat & Usaha",
+    short_label: "PAKET 10 LITER",
     product_type: "SUSU_CAIR",
-    bpom_number: "Kemitraan Suplai Rantai Dingin",
+    bpom_number: "Perahan Harian Rantai Dingin",
     weight_grams: 10000,
     boxes_count: 10,
     base_cost_rp: 180000,
     sell_price_rp: 280000,
     strike_price_rp: 350000,
     stock_qty: 25,
-    badge: "Pilihan Cafe & Depot",
+    badge: "Hemat 10 Liter",
     image_url:
       "https://images.unsplash.com/photo-1528750997573-59b89d56f4f7?auto=format&fit=crop&w=800&q=80",
     gallery_urls: [
@@ -459,7 +459,7 @@ export const INITIAL_PRODUCTS = [
       "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=800&q=80",
     ],
     benefit_note:
-      "Paket suplai rutin terjadwal untuk kedai kopi (Goat Milk Coffee / Latte), depot susu murni, steling jamu, dan industri kosmetik kefir. Pengiriman cold chain steril wilayah DIY.",
+      "Paket suplai 10 Liter kemasan hemat untuk berbagai kebutuhan usaha olahan, minuman segar, maupun konsumsi rutin keluarga. Pengiriman rantai dingin steril wilayah Yogyakarta.",
     is_best_seller: false,
     is_active: true,
   },

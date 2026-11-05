@@ -51,10 +51,10 @@ export default function LayananPage() {
               <QrCode className="w-3.5 h-3.5" /> Standar Layanan &amp; Paspor QR
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Layanan Peternakan &amp; Verifikasi Paspor Digital
+              Layanan &amp; Standar Mutu Ternak
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Standar operasional distribusi ternak bergaransi dari Sentra Peternakan Terpadu di Yogyakarta, serta portal pengecekan nomor Ear-Tag Paspor Digital untuk kambing unggulan.
+              Standar mutu ternak bergaransi, sertifikat kesehatan hewan (SKKH), dan garansi pengiriman aman se-DIY.
             </p>
           </div>
 

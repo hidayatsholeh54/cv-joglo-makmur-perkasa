@@ -44,15 +44,13 @@ export default function KontakPage() {
           {/* Header Kontak 100% Rata Kiri Seragam */}
           <div className="max-w-3xl space-y-2">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Globe className="w-3.5 h-3.5" /> Hubungi Kami
+              <Globe className="w-3.5 h-3.5" /> HUBUNGI KAMI
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Pusat Informasi &amp; Layanan Pelanggan
+              Pusat Layanan Pelanggan
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Hubungi tim kami untuk pemesanan hewan Qurban &amp; Aqiqah, kemitraan
-              reseller Susu BPOM, koordinasi pengadaan proyek, maupun penjadwalan
-              kunjungan ke sentra peternakan Samigaluh, Kulon Progo.
+              Konsultasi pemesanan Qurban &amp; Aqiqah, kemitraan reseller Susu BPOM, pengadaan proyek, atau jadwal kunjungan kandang Samigaluh, Kulon Progo.
             </p>
           </div>
 
@@ -67,7 +65,7 @@ export default function KontakPage() {
                     KANTOR PUSAT &amp; SENTRA PETERNAKAN
                   </span>
                   <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
-                    CV Joglo Makmur Perkasa
+                    Sentra Peternakan &amp; Kantor Resmi
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
                     Sentra peternakan terintegrasi &amp; produksi olahan susu kambing BPOM RI

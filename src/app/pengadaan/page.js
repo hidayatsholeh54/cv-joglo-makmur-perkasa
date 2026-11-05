@@ -97,16 +97,13 @@ export default function PengadaanPage() {
           {/* ============================================================== */}
           <div className="max-w-3xl space-y-2">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Building2 className="w-3.5 h-3.5" /> BADAN USAHA RESMI &amp; REKANAN PROYEK
+              <Building2 className="w-3.5 h-3.5" /> PENGADAAN &amp; PROYEK RESMI
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Layanan Pengadaan Ternak Partai Besar &amp; Kerjasama Proyek
+              Pengadaan Ternak &amp; Kerjasama Proyek
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Pusat penyediaan bibit kambing, domba, dan sapi skala besar
-              berbadan hukum resmi di Yogyakarta. Melayani kebutuhan program
-              ketahanan pangan desa (BUMDes), proyek instansi dinas, program CSR
-              perusahaan swasta/BUMN, maupun kemitraan suplai.
+              Penyedia resmi bibit kambing, domba, dan sapi berbadan hukum untuk program ketahanan pangan BUMDes, Dinas Instansi, dan CSR Perusahaan.
             </p>
           </div>
 

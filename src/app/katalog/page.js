@@ -112,31 +112,28 @@ function KatalogContent() {
 
       <main className="flex-1 py-6 lg:py-8">
         <div className="container-nusa space-y-6 lg:space-y-8">
-          {/* Header Katalog Mewah & Tenang */}
-          <div className="max-w-3xl space-y-2.5">
+          {/* Header Katalog Ringkas Langsung ke Produk */}
+          <div className="max-w-3xl space-y-2">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <ShieldCheck className="w-3.5 h-3.5" /> KATALOG RESMI JOGLO MAKMUR
+              <ShieldCheck className="w-3.5 h-3.5" /> KATALOG PRODUK RESMI
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
-              Pilihan Ternak Unggulan &amp; Susu Kambing BPOM
+              Katalog Ternak &amp; Susu Kambing BPOM
             </h1>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-2xl">
-              Ketersediaan stok riil siap kirim dari sentra kandang terpadu
-              Yogyakarta. Klik pada kartu produk untuk melihat detail spesifikasi
-              bobot riil, sertifikat kesehatan drh., maupun legalitas BPOM.
+              Pilihan hewan qurban, bibit ternak, dan susu kambing etawa BPOM siap kirim dari sentra Kulon Progo.
             </p>
 
-            {/* Live Inventory Counter Bar */}
-            <div className="flex flex-wrap items-center gap-2.5 pt-1 text-xs">
+            {/* Live Inventory Counter Bar Ringkas */}
+            <div className="flex flex-wrap items-center gap-2 pt-0.5 text-xs">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] font-bold">
                 <CheckCircle2 className="w-3.5 h-3.5" />
-                <span>Stok Ternak Ready: {livestockItems.reduce((acc, i) => acc + (i.available_qty || 1), 0)} Ekor</span>
+                <span>Ready: {livestockItems.reduce((acc, i) => acc + (i.available_qty || 1), 0)} Ekor Ternak</span>
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-700 font-bold">
                 <ShieldCheck className="w-3.5 h-3.5 text-slate-500" />
-                <span>Susu BPOM Ready: {products.reduce((acc, p) => acc + (p.stock_qty || 0), 0)} Pack</span>
+                <span>{products.reduce((acc, p) => acc + (p.stock_qty || 0), 0)} Pouch Susu BPOM</span>
               </span>
-              <span className="text-slate-400 font-medium hidden sm:inline">• Sentra Samigaluh, Kulon Progo</span>
             </div>
           </div>
 

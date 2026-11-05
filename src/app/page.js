@@ -28,7 +28,7 @@ export default function HomePage() {
 
       <main className="flex-1">
         {/* ================================================================= */}
-        {/* 1. HERO SECTION (PAS SATU KOTAK PROPORSI HARMONIS DI LAPTOP)      */}
+        {/* 1. HERO SECTION (BERSIH, ELEGAN & MENARIK DI HP DAN LAPTOP)       */}
         {/* ================================================================= */}
         <section className="relative overflow-hidden py-6 lg:py-8 border-b border-slate-100 bg-gradient-to-b from-emerald-50/20 to-white">
           <div className="container-nusa">
@@ -36,20 +36,16 @@ export default function HomePage() {
               {/* SISI KIRI: Headline & Value Proposition */}
               <div className="lg:col-span-6 space-y-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-                  <span>CV JOGLO MAKMUR PERKASA • YOGYAKARTA</span>
+                  <span>• PUSAT PETERNAKAN &amp; SUSU BPOM YOGYAKARTA</span>
                 </div>
 
-                <h1 className="font-heading text-3xl sm:text-4xl lg:text-[42px] font-bold tracking-tight text-slate-900 leading-[1.16]">
-                  Pemberdayaan Ekosistem{" "}
-                  <span className="text-[#15803d]">Peternakan Modern</span> &amp;
-                  Inovasi Nutrisi.
+                <h1 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-slate-900 leading-[1.18]">
+                  Pusat Hewan Qurban, Aqiqah &amp;{" "}
+                  <span className="text-[#15803d]">Susu Kambing BPOM</span>
                 </h1>
 
                 <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-                  Menghubungkan jaringan kandang plasma rakyat di Yogyakarta
-                  dengan standarisasi hewan ternak, pengadaan Aqiqah, Qurban,
-                  Tender Pemerintah, serta produk olahan Susu Kambing Bubuk Murni
-                  berizin BPOM RI.
+                  Penyedia resmi hewan Qurban &amp; Aqiqah syar&apos;i, pengadaan ternak instansi, serta produk olahan Susu Kambing Bubuk Murni berizin resmi BPOM RI dari Yogyakarta.
                 </p>
 
                 {/* Tombol Aksi */}
@@ -71,94 +67,79 @@ export default function HomePage() {
                   </Link>
                 </div>
 
-                {/* Indikator Trust Ringkas */}
-                <div className="pt-3 grid grid-cols-3 gap-3 max-w-lg border-t border-slate-100 text-xs">
-                  <div>
-                    <div className="text-lg sm:text-xl font-extrabold text-[#15803d]">
-                      100% Sehat
-                    </div>
-                    <div className="text-slate-500 font-medium text-[11px]">
-                      Sesuai Syariat &amp; Aktif
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-lg sm:text-xl font-extrabold text-slate-900">
-                      {partnerFarms.length} Kandang
-                    </div>
-                    <div className="text-slate-500 font-medium text-[11px]">
-                      Mitra Plasma DIY
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-lg sm:text-xl font-extrabold text-slate-900">
-                      BPOM RI MD
-                    </div>
-                    <div className="text-slate-500 font-medium text-[11px]">
-                      Susu Bubuk Murni
-                    </div>
-                  </div>
+                {/* Indikator Trust Ringkas Ala NusaQu */}
+                <div className="pt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-slate-600 border-t border-slate-100">
+                  <span className="inline-flex items-center gap-1.5 font-medium">
+                    <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> 100% Syar&apos;i &amp; SKKH Dokter Hewan
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 font-medium">
+                    <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> Susu Murni BPOM RI MD
+                  </span>
+                  <span className="inline-flex items-center gap-1.5 font-medium">
+                    <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" /> Gratis Antar Se-DIY
+                  </span>
                 </div>
               </div>
 
-              {/* SISI KANAN: GRID 4 FOTO RAPI KOTAK SIMETRIS (SESUAI REQUEST USER) */}
+              {/* SISI KANAN: GRID 4 FOTO RAPI, SIMETRIS & MEMIKAT DI HP MAUPUN LAPTOP */}
               <div className="lg:col-span-6">
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 max-w-lg mx-auto lg:max-w-none">
+                <div className="grid grid-cols-2 gap-2.5 sm:gap-4 max-w-lg mx-auto lg:max-w-none">
                   {/* Foto 1: Kambing PE / Aqiqah (Kiri Atas) */}
-                  <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
                     <img
                       src="https://images.unsplash.com/photo-1524024973431-2ad916746881?auto=format&fit=crop&w=700&q=80"
-                      alt="Bibit PE, Qurban & Aqiqah"
+                      alt="Hewan Qurban & Aqiqah"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[11px] font-extrabold shadow-sm">
-                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" />
-                        <span>Bibit PE, Qurban &amp; Aqiqah</span>
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
+                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                        <span className="truncate">Qurban &amp; Aqiqah</span>
                       </span>
                     </div>
                   </div>
 
-                  {/* Foto 2: Sapi Pengadaan Tender (Kanan Atas) */}
-                  <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
-                    <img
-                      src="https://images.unsplash.com/photo-1545468800-85cc9bc6ecf7?auto=format&fit=crop&w=700&q=80"
-                      alt="Tender Pemerintah & Dinas"
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[11px] font-extrabold shadow-sm">
-                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" />
-                        <span>Tender Pemerintah</span>
-                      </span>
-                    </div>
-                  </div>
-
-                  {/* Foto 3: Susu Kambing Bubuk Murni (Kiri Bawah) */}
-                  <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
+                  {/* Foto 2: Susu Kambing Murni BPOM Milkku 250g (Kanan Atas) */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
                     <img
                       src="/images/DSCF7005_hero.jpg?v=2"
-                      alt="Susu Kambing BPOM RI CV Joglo Makmur Perkasa"
+                      alt="Susu Kambing Bubuk Murni BPOM RI"
                       className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[11px] font-extrabold shadow-sm">
-                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" />
-                        <span>Susu Kambing BPOM</span>
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
+                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                        <span className="truncate">Susu Kambing BPOM</span>
                       </span>
                     </div>
                   </div>
 
-                  {/* Foto 4: Kambing di Kandang Mitra Bersih (Kanan Bawah) */}
-                  <div className="relative rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
+                  {/* Foto 3: Sapi & Domba Pengadaan Proyek (Kiri Bawah) */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
                     <img
-                      src="https://images.unsplash.com/photo-1588466585717-f8041aec7875?auto=format&fit=crop&w=700&q=80"
-                      alt="Jaringan Kandang Partner DIY"
+                      src="https://images.unsplash.com/photo-1545468800-85cc9bc6ecf7?auto=format&fit=crop&w=700&q=80"
+                      alt="Pengadaan BUMDes & Instansi"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    <div className="absolute bottom-3 left-3 right-3">
-                      <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[11px] font-extrabold shadow-sm">
-                        <Check className="w-3.5 h-3.5 text-[#15803d] stroke-[2.5]" />
-                        <span>Jaringan Kandang Partner</span>
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
+                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                        <span className="truncate">Pengadaan BUMDes</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Foto 4: Sentra Kandang Kulon Progo (Kanan Bawah) */}
+                  <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-sm border border-slate-100 group">
+                    <img
+                      src="https://images.unsplash.com/photo-1588466585717-f8041aec7875?auto=format&fit=crop&w=700&q=80"
+                      alt="Sentra Kandang Terpadu Kulon Progo"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute bottom-2.5 left-2.5 right-2.5">
+                      <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/95 backdrop-blur-xs text-slate-900 text-[10px] sm:text-[11px] font-bold shadow-xs">
+                        <Check className="w-3 h-3 text-[#15803d] stroke-[2.5] shrink-0" />
+                        <span className="truncate">Sentra Kandang DIY</span>
                       </span>
                     </div>
                   </div>
@@ -224,13 +205,13 @@ export default function HomePage() {
           <div className="container-nusa">
             <div className="max-w-2xl mb-12">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
-                DIVISI &amp; SOLUSI
+                DIVISI &amp; LAYANAN
               </span>
-              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-slate-900 mt-1">
-                Fokus Layanan CV Joglo Makmur Perkasa
+              <h2 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mt-1">
+                Fokus Layanan Utama
               </h2>
               <p className="text-sm text-slate-600 mt-2">
-                Dirancang terintegrasi dari hulu peternakan hingga produk hilir bernilai tambah.
+                Dirancang terintegrasi dari hulu sentra kandang hingga produk hilir bernilai gizi tinggi.
               </p>
             </div>
 
@@ -248,9 +229,8 @@ export default function HomePage() {
                     Ternak Hidup &amp; Qurban
                   </h3>
                   <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Kambing Jawa Randu, Bligon, PE Kaligesing, domba, dan sapi.
-                    Mendukung stok kuantitas reguler serta ternak ber-Paspor QR
-                    untuk kelas bibit unggul.
+                    Kambing Jawa Randu, Bligon, PE Kaligesing, domba, dan sapi poel 100% syar&apos;i.
+                    Lengkap sertifikat SKKH dokter hewan, gratis titip rawat dan antar se-DIY.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">
@@ -264,8 +244,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Kotak 2: Susu Kambing BPOM */}
-              <div className="nusa-card p-6 sm:p-7 bg-white flex flex-col justify-between">
+              {/* Kotak 2: Susu Kambing Murni BPOM */}
+              <div className="nusa-card p-6 sm:p-7 bg-white flex flex-col justify-between border-2 border-emerald-600/30">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#15803d] mb-5">
                     <Sparkles className="w-6 h-6" />
@@ -274,12 +254,11 @@ export default function HomePage() {
                     02 • PRODUK HILIR &amp; GIZI
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Susu Kambing Bubuk BPOM
+                    Susu Kambing Murni BPOM
                   </h3>
                   <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Pengolahan susu kambing murni kemasan pouch 250g.
-                    Higienis, tidak berbau prengus, ramah lambung, dan resmi
-                    memiliki izin edar BPOM RI MD.
+                    Pengolahan susu kambing etawa bubuk murni kemasan pouch 250g (Milkku).
+                    Gurih alami tanpa bau prengus, ramah lambung, dan resmi memiliki izin edar BPOM RI MD &amp; Halal MUI.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">
@@ -303,12 +282,11 @@ export default function HomePage() {
                     03 • B2B &amp; KEMITRAAN PROYEK
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Pengadaan Ternak Skala Besar
+                    Pengadaan Ternak &amp; Proyek B2G
                   </h3>
                   <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Mitra penyedia ternak berbadan hukum resmi untuk bantuan
-                    ketahanan pangan BUMDes, dinas pemerintah, CSR perusahaan,
-                    maupun kemitraan suplai proyek.
+                    Penyedia bibit ternak skala besar berbadan hukum resmi untuk bantuan
+                    ketahanan pangan BUMDes, dinas pemerintah, CSR perusahaan, maupun kemitraan suplai proyek.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">

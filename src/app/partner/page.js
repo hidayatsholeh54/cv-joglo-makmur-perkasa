@@ -51,7 +51,7 @@ export default function PartnerPage() {
               <Handshake className="w-3.5 h-3.5" /> 3 Pilar Kemitraan Strategis
             </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-900 leading-tight">
-              Ekosistem Kemitraan CV Joglo Makmur Perkasa
+              Program Kemitraan Terpadu
             </h1>
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl">
               Bergabung bersama ekosistem terpadu kami: peluang usaha reseller susu BPOM berulang, pemberdayaan peternak rakyat binaan (plasma), hingga penyaluran daging qurban tepat sasaran di pelosok Nusantara.

@@ -421,14 +421,14 @@ function KatalogContent() {
                         </div>
                       </div>
 
-                      {/* Detail Deskripsi Rapi */}
+                      {/* Detail Deskripsi Rapi & Minimalis */}
                       <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                         <div className="space-y-2">
                           <div className="flex items-center justify-between text-xs font-semibold text-slate-400">
                             <span>
                               {prod.product_type === "SUSU_CAIR"
-                                ? "Susu Cair Murni Segar"
-                                : "Susu Bubuk Murni 250g"}
+                                ? `${prod.weight_grams >= 1000 ? prod.weight_grams / 1000 + " Liter" : prod.weight_grams + " ml"} • Cair Murni`
+                                : `${prod.weight_grams >= 1000 ? prod.weight_grams / 1000 + " Kg" : prod.weight_grams + "g"} • Susu Bubuk`}
                             </span>
                             <span className="text-[#15803d] font-bold">
                               Stok: {prod.stock_qty}{" "}
@@ -436,23 +436,9 @@ function KatalogContent() {
                             </span>
                           </div>
 
-                          <h3 className="font-heading text-lg font-bold text-slate-900 leading-snug group-hover:text-[#15803d] transition-colors line-clamp-1">
+                          <h3 className="font-heading text-lg font-bold text-slate-900 leading-snug group-hover:text-[#15803d] transition-colors line-clamp-2">
                             {prod.name}
                           </h3>
-
-                          {/* 2 Highlight Mutu */}
-                          <div className="flex flex-wrap items-center gap-2 text-xs text-slate-600 pt-1">
-                            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-100">
-                              <CheckCircle2 className="w-3 h-3 text-[#15803d]" />
-                              {prod.product_type === "SUSU_CAIR"
-                                ? "Perahan Harian Steril"
-                                : "BPOM MD & Halal MUI"}
-                            </span>
-                            <span className="inline-flex items-center gap-1 text-[11px] font-medium text-slate-700 bg-slate-100 px-2.5 py-1 rounded-lg">
-                              <Sparkles className="w-3 h-3 text-amber-600" />
-                              Gurih Tanpa Bau Prengus
-                            </span>
-                          </div>
                         </div>
 
                         {/* Footer Harga & CTA Identik */}

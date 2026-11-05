@@ -126,7 +126,7 @@ export default function BatchQrPassportPage() {
                       {batch.vet_name}
                     </div>
                     <div className="text-[#15803d] font-bold">
-                      Dokumen: {batch.skkh_doc_url}
+                      Dokumen Pemeriksaan: {batch.skkh_doc_url}
                     </div>
                   </div>
 

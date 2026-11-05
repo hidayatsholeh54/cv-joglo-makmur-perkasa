@@ -335,17 +335,20 @@ export default function PengadaanPage() {
           {/* ============================================================== */}
           {/* 6. PERTANYAAN PENTING SEPUTAR PENGADAAN (ACCORDION PROFESIONAL)*/}
           {/* ============================================================== */}
-          <div className="space-y-4 pt-2">
-            <div>
+          <div className="space-y-8 pt-6 max-w-4xl mx-auto w-full">
+            <div className="text-center max-w-2xl mx-auto">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d]">
-                KETENTUAN KERJASAMA
+                TANYA JAWAB PENGADAAN
               </span>
-              <h2 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 mt-1">
-                Pertanyaan Penting Seputar Pengadaan &amp; Proyek
+              <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
+                Pertanyaan yang Sering Diajukan
               </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-2">
+                Keterangan penting seputar survei kandang, garansi perjalanan, dan pembayaran termin SPK resmi.
+              </p>
             </div>
 
-            <div className="space-y-3 max-w-4xl">
+            <div className="space-y-3">
               {procurementFaqs.map((faq, idx) => {
                 const isOpen = openFaq === idx;
                 return (

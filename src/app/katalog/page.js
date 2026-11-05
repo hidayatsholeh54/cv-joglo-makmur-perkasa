@@ -245,35 +245,6 @@ function KatalogContent() {
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
 
-                        {/* Badges di Foto */}
-                        <div className="absolute top-3 left-3 flex flex-wrap gap-1.5 pointer-events-none">
-                          <span
-                            className={`px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider backdrop-blur-xs shadow-xs ${
-                              item.gender === "BETINA"
-                                ? "bg-purple-100 text-purple-900 border border-purple-200"
-                                : item.gender === "JANTAN"
-                                ? "bg-emerald-100 text-emerald-900 border border-emerald-200"
-                                : "bg-slate-900 text-white"
-                            }`}
-                          >
-                            {item.gender === "BETINA"
-                              ? "♀ BETINA"
-                              : item.gender === "JANTAN"
-                              ? "♂ JANTAN"
-                              : "PAKET BIBIT"}
-                          </span>
-                          {item.inventory_mode === "INDIVIDUAL_QR" ? (
-                            <span className="px-2.5 py-1 rounded-full text-[11px] font-bold bg-[#15803d] text-white inline-flex items-center gap-1 shadow-xs">
-                              <QrCode className="w-3.5 h-3.5" />{" "}
-                              {item.eartag_code}
-                            </span>
-                          ) : (
-                            <span className="px-2.5 py-1 rounded-full text-[11px] font-medium bg-slate-900/80 text-white backdrop-blur-xs">
-                              Stok Kuantitas
-                            </span>
-                          )}
-                        </div>
-
                         <div className="absolute bottom-3 left-3 pointer-events-none">
                           {item.gallery_urls && item.gallery_urls.length > 1 && (
                             <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-slate-900/80 backdrop-blur-xs text-white inline-flex items-center gap-1 shadow-xs">
@@ -337,11 +308,6 @@ function KatalogContent() {
                         {/* Footer Harga & CTA */}
                         <div className="pt-3.5 border-t border-slate-100 flex items-center justify-between gap-3">
                           <div>
-                            <span className="text-[10px] text-slate-400 block font-medium">
-                              {item.dp_price_rp
-                                ? `Bisa DP 50%: ${formatRupiah(item.dp_price_rp)}`
-                                : "Harga Resmi"}
-                            </span>
                             <div className="text-xl font-extrabold text-slate-900 tracking-tight">
                               {formatRupiah(item.sell_price_rp)}
                             </div>

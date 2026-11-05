@@ -19,7 +19,7 @@ export const siteConfig = {
 
   stats: [
     { value: "15.000+", label: "Ternak Terdistribusi Antar-Pulau" },
-    { value: "100%", label: "Lolos Uji Medis & SKKH" },
+    { value: "100%", label: "Lolos Uji Medis & Sehat Terawat" },
     { value: "14+", label: "Provinsi Jangkauan Distribusi" },
     { value: "25+", label: "Kunjungan Edukasi Dinas & Kampus" },
   ],
@@ -36,7 +36,7 @@ export const siteConfig = {
       points: [
         "SOP Pemeriksaan pelabuhan asal & tujuan",
         "Pemeriksaan berkala dokter hewan",
-        "Lengkap dokumen legalitas NIB & SKKH"
+        "Lengkap dokumen legalitas NIB & Uji Medis"
       ]
     },
     {
@@ -111,7 +111,7 @@ export const siteConfig = {
   workflow: [
     { step: "01", title: "Review Kebutuhan & KAK Tender", desc: "Menganalisis spesifikasi jenis hewan, rentang bobot, dan persyaratan dinas." },
     { step: "02", title: "Seleksi & Perawatan di Jogja", desc: "Pemeriksaan kesehatan menyeluruh oleh dokter hewan dan vaksinasi." },
-    { step: "03", title: "Penerbitan SKKH Resmi", desc: "Pemeriksaan dinas peternakan untuk penerbitan SKKH resmi sebelum keberangkatan." },
+    { step: "03", title: "Pemeriksaan Dokter Hewan Resmi", desc: "Pemeriksaan medis menyeluruh untuk memastikan hewan prima sebelum keberangkatan." },
     { step: "04", title: "Pengiriman Aman Antar-Pulau", desc: "Armada darat/kapal roro khusus dengan pakan dan supir ekspedisi berpengalaman." },
     { step: "05", title: "Serah Terima Berita Acara (BAST)", desc: "Pemeriksaan ulang fisik di lokasi tujuan dan penandatanganan serah terima." }
   ],
@@ -125,7 +125,7 @@ export const siteConfig = {
       date: "Oktober 2024",
       location: "Yogyakarta ➔ Balikpapan / PPU",
       desc: "Program ketahanan pangan dinas peternakan. Melalui pelabuhan Tanjung Perak Surabaya menuju Pelabuhan Semayang dengan tingkat mortalitas 0%.",
-      tags: ["Kambing PE", "Kapal Roro", "SKKH Dinas Peternakan", "BAST Selesai"]
+      tags: ["Kambing PE", "Kapal Roro", "Pemeriksaan Dokter Hewan", "BAST Selesai"]
     },
     {
       id: "proj-2",

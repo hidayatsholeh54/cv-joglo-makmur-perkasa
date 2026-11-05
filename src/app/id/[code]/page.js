@@ -46,7 +46,7 @@ export default function LivestockQrPassportPage() {
     if (!item) return;
     updateLivestockFromQrScan(item.eartag_code, {
       weight_kg: Number(weightInput),
-      weight_range_label: `${weightInput} Kg (Timbang Riil Terbaru)`,
+      weight_range_label: `${weightInput} Kg`,
       available_qty: Number(qtyInput),
       vaccine_notes: vaccineInput,
     });
@@ -199,7 +199,7 @@ export default function LivestockQrPassportPage() {
 
                 {/* Vaksinasi, Kandang & Dokter Hewan */}
                 <div className="lg:col-span-7 space-y-6">
-                  {/* Riwayat Vaksinasi & SKKH */}
+                  {/* Riwayat Vaksinasi & Surat Kesehatan */}
                   <div className="nusa-card p-6 bg-white space-y-4">
                     <div className="flex items-center gap-2 text-[#15803d] font-extrabold text-xs uppercase tracking-wider">
                       <Stethoscope className="w-4 h-4" />

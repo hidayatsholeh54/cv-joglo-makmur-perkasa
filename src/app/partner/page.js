@@ -222,20 +222,20 @@ export default function PartnerPage() {
           </div>
 
           {/* SEKSI 3: PERTANYAAN UMUM CALON MITRA (ACCORDION PROFESIONAL) */}
-          <div className="space-y-6 pt-4">
-            <div className="max-w-2xl">
+          <div className="space-y-8 pt-6 max-w-4xl mx-auto w-full">
+            <div className="text-center max-w-2xl mx-auto">
               <span className="text-xs font-extrabold uppercase tracking-widest text-[#15803d] block mb-1">
                 TANYA JAWAB MITRA
               </span>
-              <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900">
+              <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900">
                 Pertanyaan yang Sering Diajukan
               </h3>
-              <p className="text-xs sm:text-sm text-slate-600 mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 mt-2">
                 Keterangan praktis seputar syarat kemitraan susu, ternak binaan, qurban cash, hingga distribusi sosial.
               </p>
             </div>
 
-            <div className="space-y-3 max-w-4xl">
+            <div className="space-y-3">
               {partnerFaqs.map((faq, idx) => {
                 const isOpen = openFaq === idx;
                 return (

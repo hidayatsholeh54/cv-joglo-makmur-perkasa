@@ -183,7 +183,7 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             <span className="hidden sm:inline">
-              SKKH Dinas Peternakan • Susu BPOM RI • Yogyakarta
+              Pemeriksaan Dokter Hewan • Susu BPOM RI • Yogyakarta
             </span>
             <Link
               href="/admin"

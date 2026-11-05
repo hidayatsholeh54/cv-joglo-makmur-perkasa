@@ -96,9 +96,6 @@ export default function PengadaanPage() {
           {/* 1. HEADER PENGADAAN (SINKRON DENGAN MENU, RESMI & BERWIBAWA)   */}
           {/* ============================================================== */}
           <div className="max-w-3xl space-y-2">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Building2 className="w-3.5 h-3.5" /> PENGADAAN &amp; PROYEK RESMI
-            </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
               Pengadaan Ternak &amp; Kerjasama Proyek
             </h1>

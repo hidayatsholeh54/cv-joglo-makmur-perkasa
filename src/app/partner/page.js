@@ -47,9 +47,6 @@ export default function PartnerPage() {
         <div className="container-nusa space-y-6 sm:space-y-10">
           {/* Header Partner Seragam Rata Kiri */}
           <div className="max-w-3xl space-y-2">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Handshake className="w-3.5 h-3.5" /> 3 Pilar Kemitraan Strategis
-            </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-[34px] font-bold text-slate-900 leading-tight">
               Program Kemitraan Terpadu
             </h1>

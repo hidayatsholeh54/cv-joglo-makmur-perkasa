@@ -43,9 +43,6 @@ export default function KontakPage() {
         <div className="container-nusa space-y-6 lg:space-y-8">
           {/* Header Kontak 100% Rata Kiri Seragam */}
           <div className="max-w-3xl space-y-2">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <Globe className="w-3.5 h-3.5" /> HUBUNGI KAMI
-            </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
               Pusat Layanan Pelanggan
             </h1>

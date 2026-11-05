@@ -114,9 +114,6 @@ function KatalogContent() {
         <div className="container-nusa space-y-6 lg:space-y-8">
           {/* Header Katalog Ringkas Langsung ke Produk */}
           <div className="max-w-3xl space-y-2">
-            <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-              <ShieldCheck className="w-3.5 h-3.5" /> KATALOG PRODUK RESMI
-            </span>
             <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
               Katalog Ternak &amp; Susu Kambing BPOM
             </h1>

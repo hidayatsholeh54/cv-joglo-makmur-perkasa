@@ -112,9 +112,6 @@ export default function MemberAreaPage() {
             <div className="space-y-6 lg:space-y-8">
               {/* Header Pintu Gerbang */}
               <div className="text-center max-w-3xl mx-auto space-y-2">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-                  <Key className="w-3.5 h-3.5" /> Portal Member &amp; Layanan Ekosistem
-                </span>
                 <h1 className="font-heading text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
                   Satu Akses Terpadu untuk Seluruh Ekosistem
                 </h1>

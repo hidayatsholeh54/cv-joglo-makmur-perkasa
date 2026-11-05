@@ -35,10 +35,6 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
               {/* SISI KIRI: Headline & Value Proposition */}
               <div className="lg:col-span-6 space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-                  <span>• PUSAT PETERNAKAN &amp; SUSU BPOM YOGYAKARTA</span>
-                </div>
-
                 <h1 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-slate-900 leading-[1.18]">
                   Pusat Hewan Qurban, Aqiqah &amp;{" "}
                   <span className="text-[#15803d]">Susu Kambing BPOM</span>

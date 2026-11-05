@@ -76,10 +76,10 @@ export default function PartnerPage() {
                     01 • HILIRISASI PRODUK
                   </span>
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-[#15803d] transition-colors">
-                    Reseller Susu BPOM
+                    Program Susu Kambing Murni
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Peluang usaha susu kambing etawa bubuk murni (Milkku 250g) berizin resmi <strong className="text-slate-900">BPOM RI MD &amp; Halal</strong>. Modal ringan mulai 10 bungkus, margin tebal, disiapkan materi promosi harian siap posting.
+                    Peluang usaha susu etawa Milkku 250g (BPOM &amp; Halal). Modal ringan mulai 10 pcs, margin tebal, materi promosi harian siap pakai.
                   </p>
                 </div>
               </div>
@@ -94,7 +94,7 @@ export default function PartnerPage() {
               </div>
             </div>
 
-            {/* KARTU 2: JOGLO HUB (Kemitraan Ternak Plasma) */}
+            {/* KARTU 2: KEMITRAAN KANDANG */}
             <div
               onClick={() => setModalType("JOGLO_HUB")}
               className="rounded-[28px] p-6 bg-white border-2 border-slate-200 hover:border-[#15803d] transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col justify-between group cursor-pointer"
@@ -109,10 +109,10 @@ export default function PartnerPage() {
                     02 • BINAAN RAKYAT
                   </span>
                   <h3 className="font-heading text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-amber-800 transition-colors">
-                    Joglo Hub Plasma
+                    Kemitraan Kandang
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Pemberdayaan peternak rakyat terintegrasi. Suplai bibit bakalan unggul, pakan konsentrat fermentasi kering (bebas beban ngarit), serta <strong className="text-slate-900">kepastian penyerapan panen (offtaker)</strong>.
+                    Pemberdayaan peternak binaan. Suplai bibit unggul, pakan fermentasi tanpa ngarit, serta kepastian 100% serap panen (offtaker).
                   </p>
                 </div>
               </div>
@@ -145,7 +145,7 @@ export default function PartnerPage() {
                     Qurban Praktis
                   </h3>
                   <p className="text-sm text-slate-600 leading-relaxed">
-                    Qurban tanpa repot potong dan kirim sendiri. Disembelih syar&apos;i dan <strong className="text-slate-900">disalurkan langsung ke daerah minus daging</strong> di pelosok Menoreh &amp; Gunungkidul lengkap video laporan atas nama Anda.
+                    Qurban praktis syar&apos;i disalurkan langsung ke daerah minus daging pelosok Menoreh &amp; Gunungkidul lengkap video laporan atas nama Anda.
                   </p>
                 </div>
               </div>
@@ -228,11 +228,11 @@ export default function PartnerPage() {
                 </p>
               </div>
 
-              {/* Q2: Joglo Hub Plasma */}
+              {/* Q2: Kemitraan Kandang */}
               <div className="nusa-card p-5 sm:p-6 bg-white space-y-2">
                 <h4 className="text-sm font-bold text-slate-900 flex items-center gap-2">
                   <HelpCircle className="w-4 h-4 text-[#15803d] shrink-0" />
-                  <span>Bagaimana skema pendampingan dan jaminan panen Joglo Hub?</span>
+                  <span>Bagaimana skema pendampingan dan jaminan panen Kemitraan Kandang?</span>
                 </h4>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-6">
                   Mitra peternak disuplai bibit bakalan lolos cek dokter hewan dan <strong>pakan konsentrat fermentasi kering</strong> (bebas beban ngarit). Tim mantri kandang melakukan kontrol kesehatan rutin, dan seluruh hasil panen <strong>100% dibeli tunai (offtaker)</strong> oleh CV.
@@ -479,7 +479,7 @@ export default function PartnerPage() {
                   PROGRAM PEMBERDAYAAN PETERNAK
                 </span>
                 <h3 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-                  Joglo Hub Ecosystem
+                  Kemitraan Kandang Rakyat
                 </h3>
                 <p className="text-sm sm:text-base text-slate-600 mt-2 leading-relaxed">
                   Program kemitraan ternak rakyat terintegrasi di Samigaluh, Kulon Progo, Sleman, Bantul, dan sekitarnya dengan jaminan pasokan dan pasar.

@@ -226,11 +226,10 @@ export default function HomePage() {
                     01 • RETAIL &amp; AQIQAH
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Ternak Hidup &amp; Qurban
+                    Ternak Qurban &amp; Aqiqah
                   </h3>
-                  <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Kambing Jawa Randu, Bligon, PE Kaligesing, domba, dan sapi poel 100% syar&apos;i.
-                    Lengkap sertifikat SKKH dokter hewan, gratis titip rawat dan antar se-DIY.
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Kambing, domba, &amp; sapi 100% syar&apos;i bersertifikat SKKH dokter hewan. Gratis titip rawat dan antar se-DIY.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">
@@ -244,7 +243,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Kotak 2: Susu Kambing Murni BPOM */}
+              {/* Kotak 2: Program Susu Kambing Murni BPOM */}
               <div className="nusa-card p-6 sm:p-7 bg-white flex flex-col justify-between border-2 border-emerald-600/30">
                 <div>
                   <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center text-[#15803d] mb-5">
@@ -254,11 +253,10 @@ export default function HomePage() {
                     02 • PRODUK HILIR &amp; GIZI
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Susu Kambing Murni BPOM
+                    Program Susu Kambing Murni
                   </h3>
-                  <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Pengolahan susu kambing etawa bubuk murni kemasan pouch 250g (Milkku).
-                    Gurih alami tanpa bau prengus, ramah lambung, dan resmi memiliki izin edar BPOM RI MD &amp; Halal MUI.
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Susu kambing etawa bubuk Milkku 250g (BPOM MD &amp; Halal). Gurih alami tanpa bau prengus, kaya kalsium &amp; ramah lambung.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">
@@ -282,11 +280,10 @@ export default function HomePage() {
                     03 • B2B &amp; KEMITRAAN PROYEK
                   </span>
                   <h3 className="text-xl font-bold text-slate-900 mt-1">
-                    Pengadaan Ternak &amp; Proyek B2G
+                    Pengadaan Ternak &amp; BUMDes
                   </h3>
-                  <p className="text-xs text-slate-500 mt-2 leading-relaxed">
-                    Penyedia bibit ternak skala besar berbadan hukum resmi untuk bantuan
-                    ketahanan pangan BUMDes, dinas pemerintah, CSR perusahaan, maupun kemitraan suplai proyek.
+                  <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+                    Penyedia bibit ternak resmi skala besar untuk program ketahanan pangan BUMDes, dinas pemerintah, dan CSR perusahaan.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">

@@ -17,15 +17,17 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  title: "CV Joglo Makmur Perkasa | Ekosistem Peternakan Modern, Qurban & Susu Kambing BPOM",
+  title: "CV Joglo Makmur Perkasa | Sentra Peternakan Terpadu & Olahan Susu Kambing Murni",
   description:
-    "Pusat pengadaan ternak pemerintah (kambing & sapi sehat terawat), katalog Qurban & Aqiqah terverifikasi dokter hewan, kemitraan kandang rakyat, serta hilirisasi Susu Kambing Etawa Bubuk BPOM di Yogyakarta.",
+    "Sentra peternakan terpadu penyedia hewan Qurban & Aqiqah syar'i, bibit unggul, kemitraan plasma peternak, serta hilirisasi Susu Kambing Etawa (bubuk BPOM & susu segar) di Samigaluh, Kulon Progo, Yogyakarta.",
   keywords: [
     "CV Joglo Makmur Perkasa",
-    "Pengadaan Ternak Pemerintah",
+    "Sentra Peternakan Terpadu",
     "Jual Kambing Qurban Jogja",
     "Paket Aqiqah dan Bibit Kambing PE",
     "Susu Kambing Etawa Bubuk BPOM",
+    "Susu Kambing Murni Segar Jogja",
+    "Kemitraan Peternak Kambing",
   ],
 };
 

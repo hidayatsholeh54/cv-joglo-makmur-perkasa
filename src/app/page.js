@@ -58,16 +58,16 @@ export default function HomePage() {
               {/* SISI KIRI: Headline & Value Proposition */}
               <div className="lg:col-span-6 space-y-4">
                 <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-[#15803d] text-xs font-extrabold uppercase tracking-wider">
-                  <span>• PUSAT PETERNAKAN &amp; SUSU BPOM YOGYAKARTA</span>
+                  <span>• SENTRA PETERNAKAN TERPADU YOGYAKARTA</span>
                 </div>
 
                 <h1 className="font-heading text-3xl sm:text-4xl lg:text-[44px] font-bold tracking-tight text-slate-900 leading-[1.18]">
-                  Pusat Hewan Qurban, Aqiqah &amp;{" "}
-                  <span className="text-[#15803d]">Susu Kambing BPOM</span>
+                  Sentra Peternakan Terpadu &amp;{" "}
+                  <span className="text-[#15803d]">Olahan Susu Kambing Murni</span>
                 </h1>
 
                 <p className="text-sm sm:text-base text-slate-600 max-w-xl leading-relaxed">
-                  Penyedia resmi hewan Qurban &amp; Aqiqah syar&apos;i, pengadaan ternak instansi, serta produk olahan Susu Kambing Bubuk Murni berizin resmi BPOM RI dari Yogyakarta.
+                  Penyedia hewan Qurban &amp; Aqiqah syar&apos;i, bibit ternak unggul, serta susu kambing etawa (bubuk BPOM &amp; susu segar) langsung dari sentra Kulon Progo, Yogyakarta.
                 </p>
 
                 {/* Tombol Aksi */}

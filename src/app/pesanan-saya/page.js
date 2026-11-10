@@ -46,18 +46,12 @@ export default function MemberAreaPage() {
   const submitPaymentProof = useAppStore((s) => s.submitPaymentProof);
   const approveOrderPayment = useAppStore((s) => s.approveOrderPayment);
 
-  // Active Tab Member Area: "ORDERS" | "TITIP_RAWAT" | "RESELLER"
+  // Active Tab Member Area: "ORDERS" | "RESELLER"
   const [activeTab, setActiveTab] = useState("ORDERS");
 
   // Form Google Login Cepat di Halaman
   const [googleEmailInput, setGoogleEmailInput] = useState("");
   const [googleNameInput, setGoogleNameInput] = useState("");
-
-  // State Pelaporan Mingguan Ternak (Tab Titip Rawat)
-  const [selectedTag, setSelectedTag] = useState("JMP-2026-088");
-  const [newWeight, setNewWeight] = useState("35.5");
-  const [reportNote, setReportNote] = useState("Kambing sangat lincah, nafsu makan tinggi, pakan konsentrat habis.");
-  const [reportSuccess, setReportSuccess] = useState(false);
 
   // Filter pesanan user yang sedang login
   const myOrders = orders.filter((o) =>
@@ -68,19 +62,11 @@ export default function MemberAreaPage() {
     submitPaymentProof(invCode, "/bukti-transfer-simulasi.jpg");
   };
 
-  const handleLaporMingguan = (e) => {
-    e.preventDefault();
-    setReportSuccess(true);
-    setTimeout(() => setReportSuccess(false), 3000);
-  };
-
   const handleQuickLoginRole = (roleType) => {
     // Cari user demo berdasarkan role atau login default
     const matched = users.find((u) => u.role === roleType) || users[0];
     switchDemoUser(matched.id);
-    if (roleType === "FIELD_ADMIN" || roleType === "FARMER_PARTNER") {
-      setActiveTab("TITIP_RAWAT");
-    } else if (roleType === "RESELLER") {
+    if (roleType === "RESELLER") {
       setActiveTab("RESELLER");
     } else {
       setActiveTab("ORDERS");
@@ -139,7 +125,7 @@ export default function MemberAreaPage() {
                         Shohibul Qurban &amp; Aqiqah
                       </h3>
                       <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                        Pantau status invoice resmi, masa hold 1 jam, skema DP 50%, dan cek Paspor Digital kambing qurban Anda.
+                        Pantau status invoice resmi, verifikasi pembayaran, skema DP 50%, dan kuitansi digital pesanan Anda.
                       </p>
                     </div>
                   </div>
@@ -149,29 +135,29 @@ export default function MemberAreaPage() {
                   </div>
                 </div>
 
-                {/* Pintu 2: Mitra Ternak (Plasma Kunjungan) */}
+                {/* Pintu 2: Mitra Peternak Plasma */}
                 <div
                   onClick={() => handleQuickLoginRole("FIELD_ADMIN")}
                   className="rounded-[28px] p-5 sm:p-6 bg-white border-2 border-slate-200/80 hover:border-amber-600 transition-all duration-300 shadow-sm hover:shadow-xl flex flex-col justify-between group cursor-pointer"
                 >
                   <div className="space-y-3">
                     <div className="w-12 h-12 rounded-xl bg-amber-50 text-amber-700 flex items-center justify-center group-hover:scale-110 transition-transform">
-                      <Camera className="w-6 h-6" />
+                      <HeartHandshake className="w-6 h-6" />
                     </div>
                     <div>
                       <span className="text-[10px] font-extrabold uppercase tracking-wider text-amber-700">
                         KATEGORI 02
                       </span>
                       <h3 className="font-heading text-lg sm:text-xl font-bold text-slate-900 mt-0.5 group-hover:text-amber-700 transition">
-                        Mitra Ternak &amp; Lapangan
+                        Mitra Peternak Plasma
                       </h3>
                       <p className="text-xs text-slate-500 mt-1.5 leading-relaxed">
-                        Input timbangan bobot mingguan &amp; upload foto fisik hewan titipan mitra plasma via Web QR kamera HP.
+                        Akses kemitraan kandang rakyat, pendampingan pakan fermentasi, dan jaminan offtaker hasil panen.
                       </p>
                     </div>
                   </div>
                   <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-amber-700">
-                    <span>Masuk Portal Lapangan</span>
+                    <span>Masuk Portal Mitra</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -242,7 +228,7 @@ export default function MemberAreaPage() {
                     Masuk Cepat dengan Akun Google
                   </h3>
                   <p className="text-xs text-slate-500 max-w-md mx-auto">
-                    Tanpa perlu mengingat password. Akun Google Anda otomatis terhubung dengan data pemesanan, invoice, dan ternak titipan Anda.
+                    Tanpa perlu mengingat password. Akun Google Anda otomatis terhubung dengan data pemesanan, invoice resmi, dan kuitansi pembayaran Anda.
                   </p>
                 </div>
 
@@ -432,18 +418,6 @@ export default function MemberAreaPage() {
                       <Layers className="w-4 h-4" />
                       <span>Stok Ternak ({livestockItems.length}) &amp; Susu ({products.length})</span>
                     </button>
-
-                    <button
-                      onClick={() => setActiveTab("TITIP_RAWAT")}
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition cursor-pointer ${
-                        activeTab === "TITIP_RAWAT"
-                          ? "bg-slate-900 text-white shadow-xs"
-                          : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
-                      }`}
-                    >
-                      <Camera className="w-4 h-4" />
-                      <span>Laporan Timbangan Mingguan Kandang</span>
-                    </button>
                   </>
                 ) : (
                   <>
@@ -457,18 +431,6 @@ export default function MemberAreaPage() {
                     >
                       <ShoppingBag className="w-4 h-4" />
                       <span>Pesanan &amp; Invoice Saya ({myOrders.length})</span>
-                    </button>
-
-                    <button
-                      onClick={() => setActiveTab("TITIP_RAWAT")}
-                      className={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition cursor-pointer ${
-                        activeTab === "TITIP_RAWAT"
-                          ? "bg-[#15803d] text-white shadow-xs"
-                          : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
-                      }`}
-                    >
-                      <Camera className="w-4 h-4" />
-                      <span>Mitra Ternak (Pelaporan Mingguan QR)</span>
                     </button>
 
                     <button
@@ -768,140 +730,7 @@ export default function MemberAreaPage() {
               )}
 
               {/* ================================================================ */}
-              {/* TAB 2: MITRA TERNAK (PELAPORAN MINGGUAN FOTO VIA WEB QR)          */}
-              {/* ================================================================ */}
-              {activeTab === "TITIP_RAWAT" && (
-                <div className="bg-white rounded-[32px] p-8 sm:p-10 border border-slate-200/80 shadow-xs space-y-8">
-                  <div>
-                    <span className="text-xs font-extrabold uppercase tracking-wider text-[#15803d]">
-                      MONITORING HEWAN TITIP RAWAT &amp; KANDANG MITRA
-                    </span>
-                    <h2 className="font-heading text-2xl sm:text-3xl font-bold text-slate-900 mt-1">
-                      Pelaporan Mingguan Kondisi Ternak via Web QR
-                    </h2>
-                    <p className="text-sm text-slate-500 mt-1 leading-relaxed">
-                      Fitur transparansi bagi mitra kandang atau pemilik hewan titip
-                      rawat: ambil foto fisik terbaru ternak di kandang, perbarui
-                      bobot timbangan riil, dan pantau catatan pakan langsung di
-                      Paspor Digital QR.
-                    </p>
-                  </div>
-
-                  {/* KARTU EDUKASI WORKFLOW LAPANGAN */}
-                  <div className="p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 text-xs sm:text-sm text-slate-700 space-y-2">
-                    <div className="font-bold text-[#15803d] flex items-center gap-2">
-                      <ShieldCheck className="w-4 h-4" />
-                      <span>Sistem Monitoring Realistis: Bebas Ribet Bagi Peternak Mitra</span>
-                    </div>
-                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                      Peternak plasma di pelosok Bantul/Kulon Progo tidak dituntut mengoperasikan aplikasi rumit.
-                      Saat <strong>kunjungan mingguan</strong> oleh tim CV Joglo Makmur Perkasa, staf kami cukup memindai QR Ear-Tag di telinga hewan, menimbang bobot riil, dan menjepret foto fisik. Shohibul Qurban (pembeli) dapat langsung memantau transparansi pertumbuhannya dari mana saja.
-                    </p>
-                  </div>
-
-                  {reportSuccess && (
-                    <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-sm text-[#15803d] font-bold flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5 shrink-0" />
-                      <span>
-                        Laporan mingguan berhasil disimpan! Data telah terupdate di
-                        sistem Paspor QR ternak.
-                      </span>
-                    </div>
-                  )}
-
-                  <form onSubmit={handleLaporMingguan} className="space-y-6 max-w-4xl">
-                    <div>
-                      <div className="flex items-center justify-between mb-1.5">
-                        <label className="text-sm font-bold text-slate-700">
-                          Pilih Ternak yang Dilaporkan:
-                        </label>
-                        <Link
-                          href={`/id/${selectedTag}`}
-                          target="_blank"
-                          className="text-xs sm:text-sm text-[#15803d] font-bold hover:underline"
-                        >
-                          Buka Paspor Digital ({selectedTag}) ↗
-                        </Link>
-                      </div>
-                      <select
-                        value={selectedTag}
-                        onChange={(e) => setSelectedTag(e.target.value)}
-                        className="w-full px-4 py-3.5 rounded-2xl border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:border-[#15803d]"
-                      >
-                        <option value="JMP-2026-088">
-                          JMP-2026-088 • Kambing PE Super Jantan (Kandang Kaliurang S1)
-                        </option>
-                        <option value="JMP-SAPI-04">
-                          JMP-SAPI-04 • Sapi Limousin Qurban (Kandang Kulon Progo)
-                        </option>
-                      </select>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                          Bobot Timbangan Terkini (Kg):
-                        </label>
-                        <input
-                          type="number"
-                          step="0.1"
-                          value={newWeight}
-                          onChange={(e) => setNewWeight(e.target.value)}
-                          className="w-full px-4 py-3.5 rounded-2xl border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:border-[#15803d]"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                          Periode Laporan:
-                        </label>
-                        <input
-                          type="text"
-                          defaultValue="Minggu ke-4 • Bulan Ini"
-                          className="w-full px-4 py-3.5 rounded-2xl border border-slate-200 text-sm bg-slate-50 text-slate-600 font-medium"
-                        />
-                      </div>
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                        Catatan Pakan &amp; Kesehatan Mingguan:
-                      </label>
-                      <textarea
-                        rows={3}
-                        value={reportNote}
-                        onChange={(e) => setReportNote(e.target.value)}
-                        className="w-full px-4 py-3.5 rounded-2xl border border-slate-200 text-sm text-slate-900 focus:outline-none focus:border-[#15803d]"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-sm font-bold text-slate-700 mb-1.5">
-                        Unggah Foto Fisik Terbaru dari Kamera / HP:
-                      </label>
-                      <div className="rounded-2xl border-2 border-dashed border-slate-200 p-8 text-center space-y-2 hover:border-[#15803d] transition cursor-pointer">
-                        <Camera className="w-10 h-10 text-[#15803d] mx-auto" />
-                        <div className="text-sm font-bold text-slate-700">
-                          Klik untuk Ambil Foto Langsung dari HP
-                        </div>
-                        <span className="text-xs text-slate-400 block">
-                          Format JPG/PNG maksimal 5MB
-                        </span>
-                      </div>
-                    </div>
-
-                    <button
-                      type="submit"
-                      className="px-8 py-4 rounded-full bg-[#15803d] hover:bg-[#14532d] text-white font-bold text-sm shadow-sm transition cursor-pointer"
-                    >
-                      Kirim Laporan Mingguan ke Sistem
-                    </button>
-                  </form>
-                </div>
-              )}
-
-              {/* ================================================================ */}
-              {/* TAB 3: RESELLER SUSU KAMBING BPOM                                */}
+              {/* TAB 2: RESELLER SUSU KAMBING BPOM                                */}
               {/* ================================================================ */}
               {activeTab === "RESELLER" && (
                 <div className="bg-white rounded-[32px] p-8 sm:p-10 border border-slate-200/80 shadow-xs space-y-6">

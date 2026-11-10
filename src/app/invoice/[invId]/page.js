@@ -34,39 +34,10 @@ export default function InvoiceDetailPage() {
 
   const order = orders.find((o) => o.invoice_code.toUpperCase() === rawInvId);
 
-  // Countdown timer state
-  const [timeLeft, setTimeLeft] = useState({ minutes: 59, seconds: 59, totalSeconds: 3600 });
-  const [timerExpired, setTimerExpired] = useState(false);
-  const isExpired = Boolean((order && order.payment_status === "EXPIRED") || timerExpired);
+  const isExpired = Boolean(order && order.payment_status === "EXPIRED");
   const [copiedAmount, setCopiedAmount] = useState(false);
   const [copiedBca, setCopiedBca] = useState(false);
   const [copiedMandiri, setCopiedMandiri] = useState(false);
-  const [proofFileSimulated, setProofFileSimulated] = useState(false);
-  const [uploadLoading, setUploadLoading] = useState(false);
-
-  useEffect(() => {
-    if (!order || order.payment_status !== "UNPAID") return;
-
-    const expiryTime = new Date(order.expires_at).getTime();
-
-    const interval = setInterval(() => {
-      const now = Date.now();
-      const diffMs = expiryTime - now;
-
-      if (diffMs <= 0) {
-        clearInterval(interval);
-        setTimerExpired(true);
-        markOrderExpired(order.invoice_code);
-      } else {
-        const totalSec = Math.floor(diffMs / 1000);
-        const mins = Math.floor(totalSec / 60);
-        const secs = totalSec % 60;
-        setTimeLeft({ minutes: mins, seconds: secs, totalSeconds: totalSec });
-      }
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, [order, markOrderExpired]);
 
   const copyText = (text, type) => {
     navigator.clipboard.writeText(text);
@@ -80,15 +51,6 @@ export default function InvoiceDetailPage() {
       setCopiedMandiri(true);
       setTimeout(() => setCopiedMandiri(false), 2000);
     }
-  };
-
-  const handleUploadSimulasi = () => {
-    setUploadLoading(true);
-    setTimeout(() => {
-      submitPaymentProof(order.invoice_code, "/uploads/bukti-transfer-simulasi.jpg");
-      setProofFileSimulated(true);
-      setUploadLoading(false);
-    }, 1200);
   };
 
   if (!order) {
@@ -181,17 +143,17 @@ export default function InvoiceDetailPage() {
               </p>
             </div>
 
-            {/* COUNTDOWN 1 JAM (JIKA MASIH UNPAID) */}
+            {/* STATUS INVOICE RESMI (TENANG & ELEGAN) */}
             {isStatusUnpaid && (
-              <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-center shrink-0">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-red-600 block">
-                  SISA WAKTU BAYAR (ANTI-GHOSTING)
+              <div className="bg-emerald-50 border border-emerald-200/80 rounded-2xl p-4 text-center shrink-0">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-[#15803d] block">
+                  STATUS INVOICE
                 </span>
-                <div className="font-mono text-2xl font-black text-red-700 tracking-wider mt-0.5">
-                  {String(timeLeft.minutes).padStart(2, "0")}:{String(timeLeft.seconds).padStart(2, "0")}
+                <div className="font-heading text-lg font-bold text-slate-900 mt-0.5">
+                  Menunggu Pembayaran
                 </div>
-                <span className="text-[10px] text-red-500 block mt-0.5">
-                  Stok ternak otomatis dilepas bila habis waktu
+                <span className="text-[11px] text-slate-500 block mt-0.5">
+                  Konfirmasi mudah via WhatsApp
                 </span>
               </div>
             )}
@@ -313,27 +275,18 @@ export default function InvoiceDetailPage() {
 
                 {isStatusUnpaid && (
                   <div className="space-y-3">
-                    <p className="text-xs text-slate-600">
-                      Setelah melakukan transfer, silakan upload bukti struk/screenshot pembayaran atau kirimkan langsung ke WhatsApp Admin.
+                    <p className="text-xs text-slate-600 leading-relaxed">
+                      Setelah melakukan transfer via ATM / m-Banking, silakan kirimkan foto struk pembayaran Anda langsung ke WhatsApp Admin resmi CV Joglo Makmur Perkasa. Tim kami akan segera memverifikasi pesanan Anda.
                     </p>
-                    <div className="flex flex-wrap items-center gap-3">
-                      <button
-                        onClick={handleUploadSimulasi}
-                        disabled={uploadLoading}
-                        className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#15803d] hover:bg-[#14532d] text-white text-xs font-bold transition cursor-pointer disabled:opacity-50"
-                      >
-                        <Upload className="w-4 h-4" />
-                        <span>{uploadLoading ? "Mengunggah Bukti..." : "Upload Bukti Transfer (Simulasi Web)"}</span>
-                      </button>
-
+                    <div>
                       <a
                         href={`https://wa.me/6285162581872?text=${waConfirmText}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold transition shadow-2xs"
+                        className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-bold transition shadow-sm"
                       >
                         <MessageCircle className="w-4 h-4 fill-white text-transparent" />
-                        <span>Konfirmasi Bukti via WhatsApp</span>
+                        <span>Kirim Bukti Transfer via WhatsApp Admin</span>
                       </a>
                     </div>
                   </div>

@@ -55,7 +55,7 @@ export const siteConfig = {
       id: "qurban",
       title: "Program Qurban Bergaransi",
       badge: "Musiman & Korporat",
-      desc: "Penyediaan hewan qurban berbobot timbang hidup transparan untuk instansi, yayasan, dan masjid dengan fasilitas titip rawat gratis sampai Hari H.",
+      desc: "Penyediaan hewan qurban berbobot timbang hidup transparan untuk instansi, yayasan, dan perorangan dengan jaminan sehat dan gratis antar se-DIY.",
       hasDetailPage: false,
       points: [
         "Sertifikat sehat dokter hewan",

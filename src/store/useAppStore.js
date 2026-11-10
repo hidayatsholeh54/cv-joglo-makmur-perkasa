@@ -175,32 +175,7 @@ export const useAppStore = create(
           return {
             ok: false,
             error:
-              "Akun Google Anda telah diblokir permanen oleh Admin karena pelanggaran bukti pembayaran.",
-          };
-        }
-
-        // Cek Sabuk 2: Apakah akun sedang terkena Cooldown 24 Jam (akibat 3x Invoice Expired)?
-        if (
-          freshUser.cooldown_until &&
-          new Date(freshUser.cooldown_until).getTime() > Date.now()
-        ) {
-          return {
-            ok: false,
-            error:
-              "Akun Anda sedang dalam masa Cooldown 24 Jam karena membiarkan 3 pesanan hangus berturut-turut hari ini.",
-          };
-        }
-
-        // Cek Sabuk 3: Apakah user masih punya >= 2 Invoice UNPAID yang menggantung?
-        const activeUnpaidCount = state.orders.filter(
-          (o) => o.user_id === user.id && o.payment_status === "UNPAID"
-        ).length;
-
-        if (activeUnpaidCount >= 2) {
-          return {
-            ok: false,
-            error:
-              "Anda masih memiliki 2 pesanan berstatus Belum Dibayar (UNPAID). Silakan selesaikan atau batalkan pesanan sebelumnya terlebih dahulu.",
+              "Akun Anda telah dinonaktifkan oleh Admin karena pelanggaran kebijakan.",
           };
         }
 

@@ -50,8 +50,8 @@ export default function PartnerPage() {
       a: "Mitra peternak disuplai bibit bakalan unggul dan pakan fermentasi kering (bebas beban ngarit). Tim mantri melakukan kontrol kesehatan rutin, dan seluruh hasil panen 100% dibeli tunai (offtaker) oleh CV.",
     },
     {
-      q: "Bagaimana sistem pembelian hewan qurban dan fasilitas titip rawat?",
-      a: "Pembelian dilakukan secara tunai (Full Cash) atau DP 50% untuk mengunci fisik dan nomor telinga (Ear Tag) hewan. Hewan dirawat dan diberi pakan berkualitas secara GRATIS di kandang Kulon Progo hingga hari H kirim.",
+      q: "Bagaimana sistem pemesanan dan pengantaran hewan qurban?",
+      a: "Pemesanan dapat dilakukan secara tunai (Full Cash) maupun DP 50% untuk mengunci fisik dan nomor telinga (Ear Tag) hewan. Hewan dipersiapkan dalam kondisi prima dan diantarkan langsung ke alamat tujuan Anda secara gratis se-DIY.",
     },
     {
       q: "Bagaimana bukti penyaluran dan laporan ibadah Qurban Praktis?",

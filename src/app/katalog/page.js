@@ -690,7 +690,7 @@ function KatalogContent() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-[#15803d] shrink-0" />
-                      <span>Gratis Biaya Perawatan s/d Hari-H Qurban</span>
+                      <span>Pemeriksaan Medis Bebas PMK &amp; Sehat</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Check className="w-3.5 h-3.5 text-[#15803d] shrink-0" />

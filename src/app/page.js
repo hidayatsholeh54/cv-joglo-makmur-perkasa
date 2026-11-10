@@ -39,8 +39,8 @@ export default function HomePage() {
       a: "Ya, 100% gratis ongkir untuk seluruh wilayah Daerah Istimewa Yogyakarta (Bantul, Sleman, Kota Jogja, Kulon Progo, Gunungkidul). Armada pengiriman kami dilengkapi sekat longgar dan pakan agar hewan tiba dalam kondisi bugar dan tidak stres.",
     },
     {
-      q: "Bagaimana fasilitas titip rawat hewan qurban hingga Hari H?",
-      a: "Setiap pembelian hewan qurban (Full Cash maupun DP 50%) mendapatkan fasilitas titip rawat dan pakan berkualitas secara GRATIS di kandang transit Kulon Progo hingga jadwal pengantaran Hari H tiba tanpa biaya tambahan sepeser pun.",
+      q: "Bagaimana proses pengantaran hewan qurban ke alamat pemesan?",
+      a: "Hewan qurban diantarkan langsung ke alamat rumah, mushola, atau masjid tujuan Anda menggunakan armada khusus berstandar kenyamanan ternak. Bebas biaya kirim se-DIY dengan garansi hewan tiba dalam kondisi sehat, bugar, dan sah syariat.",
     },
   ];
 
@@ -251,7 +251,7 @@ export default function HomePage() {
                     Ternak Qurban &amp; Aqiqah
                   </h3>
                   <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-                    Kambing, domba, &amp; sapi 100% syar&apos;i dan sehat terawat. Gratis titip rawat dan antar se-DIY.
+                    Kambing, domba, &amp; sapi 100% syar&apos;i dan sehat terawat. Garansi sehat dan gratis antar se-DIY.
                   </p>
                 </div>
                 <div className="pt-5 mt-5 border-t border-slate-100">
@@ -335,7 +335,7 @@ export default function HomePage() {
                 Pertanyaan yang Sering Diajukan
               </h2>
               <p className="text-sm text-slate-600 mt-2">
-                Jawaban praktis seputar jaminan syariat, susu BPOM, pengantaran, hingga fasilitas titip rawat.
+                Jawaban praktis seputar jaminan syariat, susu BPOM, garansi sehat, hingga pengantaran se-DIY.
               </p>
             </div>
 

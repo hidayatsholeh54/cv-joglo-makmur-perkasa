@@ -172,7 +172,7 @@ function CheckoutContent() {
                 Formulir Pemesanan Resmi
               </h1>
               <p className="text-xs text-slate-500 mt-1">
-                Data akan tercatat pada invoice resmi CV Joglo Makmur Perkasa dengan masa hold 1 jam.
+                Data akan tercatat pada lembar invoice resmi CV Joglo Makmur Perkasa.
               </p>
             </div>
 
@@ -314,7 +314,7 @@ function CheckoutContent() {
                           Pelunasan 100% (Lunas)
                         </div>
                         <div className="text-[11px] text-slate-500 mt-0.5">
-                          Ternak langsung dikunci, bebas biaya rawat hingga hari H.
+                          Ternak langsung dikunci dengan garansi sehat dan gratis antar se-DIY.
                         </div>
                       </div>
                     </label>
@@ -437,7 +437,7 @@ function CheckoutContent() {
                 <span className="font-semibold text-slate-900">{formatRupiah(subtotal)}</span>
               </div>
               <div className="flex justify-between text-slate-600">
-                <span>Biaya Perawatan &amp; Pakan (Hingga Hari H)</span>
+                <span>Ongkos Kirim Area D.I. Yogyakarta</span>
                 <span className="font-semibold text-[#15803d]">GRATIS (Rp 0)</span>
               </div>
               <div className="flex justify-between text-slate-600">

@@ -43,7 +43,6 @@ export default function MemberAreaPage() {
   const switchDemoUser = useAppStore((s) => s.switchDemoUser);
   const loginWithGoogle = useAppStore((s) => s.loginWithGoogle);
   const logout = useAppStore((s) => s.logout);
-  const submitPaymentProof = useAppStore((s) => s.submitPaymentProof);
   const approveOrderPayment = useAppStore((s) => s.approveOrderPayment);
 
   // Active Tab Member Area: "ORDERS" | "RESELLER"
@@ -57,10 +56,6 @@ export default function MemberAreaPage() {
   const myOrders = orders.filter((o) =>
     currentUser ? o.user_id === currentUser.id : false
   );
-
-  const handleUploadProofSimulasi = (invCode) => {
-    submitPaymentProof(invCode, "/bukti-transfer-simulasi.jpg");
-  };
 
   const handleQuickLoginRole = (roleType) => {
     // Cari user demo berdasarkan role atau login default
@@ -648,12 +643,17 @@ export default function MemberAreaPage() {
                                   </Link>
 
                                   {isUnpaid && (
-                                    <button
-                                      onClick={() => handleUploadProofSimulasi(order.invoice_code)}
-                                      className="px-5 py-2.5 rounded-full bg-[#15803d] hover:bg-[#14532d] text-white font-bold text-xs sm:text-sm transition cursor-pointer"
+                                    <a
+                                      href={`https://wa.me/6285162581872?text=${encodeURIComponent(
+                                        `Halo Admin CV Joglo Makmur Perkasa, saya ingin konfirmasi pembayaran untuk Invoice ${order.invoice_code} (${order.item_title}) sebesar ${formatRupiah(order.amount_to_pay_rp)}.`
+                                      )}`}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="px-5 py-2.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white font-bold text-xs sm:text-sm transition flex items-center gap-1.5 shadow-2xs"
                                     >
-                                      Upload Bukti Bayar
-                                    </button>
+                                      <MessageCircle className="w-4 h-4 fill-white text-transparent" />
+                                      <span>Konfirmasi via WA</span>
+                                    </a>
                                   )}
                                 </div>
 

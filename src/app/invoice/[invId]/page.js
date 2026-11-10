@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import {
@@ -11,7 +11,6 @@ import {
   Check,
   AlertTriangle,
   CheckCircle2,
-  Upload,
   ArrowRight,
   MessageCircle,
   FileText,
@@ -29,9 +28,6 @@ export default function InvoiceDetailPage() {
   const rawInvId = decodeURIComponent(params?.invId || "").toUpperCase();
 
   const orders = useAppStore((s) => s.orders);
-  const submitPaymentProof = useAppStore((s) => s.submitPaymentProof);
-  const markOrderExpired = useAppStore((s) => s.markOrderExpired);
-
   const order = orders.find((o) => o.invoice_code.toUpperCase() === rawInvId);
 
   const isExpired = Boolean(order && order.payment_status === "EXPIRED");

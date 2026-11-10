@@ -13,7 +13,6 @@ import {
   Check,
   ChevronDown,
   X,
-  Eye,
   CheckCircle2,
   Truck,
   HeartHandshake,
@@ -287,14 +286,6 @@ function KatalogContent() {
                               : `Tersedia: ${item.available_qty} Ekor`}
                           </span>
                         </div>
-
-                        {/* Hover Overlay Hint */}
-                        <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="px-4 py-2 rounded-full bg-white/95 text-slate-900 text-xs font-bold shadow-md inline-flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                            <Eye className="w-3.5 h-3.5 text-[#15803d]" />
-                            Lihat Detail Spesifikasi
-                          </span>
-                        </div>
                       </div>
 
                       {/* Display Info Rapi & Simple (Tidak Penuh Sesak) */}
@@ -341,17 +332,9 @@ function KatalogContent() {
                           </div>
 
                           <div
-                            className="flex items-center gap-1.5 shrink-0"
+                            className="shrink-0"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <button
-                              onClick={() => openDetail("LIVESTOCK", item)}
-                              className="px-3 py-2 rounded-full border border-slate-200 hover:border-[#15803d] hover:bg-emerald-50 text-slate-700 hover:text-[#15803d] text-xs font-bold transition flex items-center gap-1"
-                            >
-                              <Eye className="w-3.5 h-3.5" />
-                              <span className="hidden sm:inline">Detail</span>
-                            </button>
-
                             <Link
                               href={
                                 isSoldOut
@@ -438,14 +421,6 @@ function KatalogContent() {
                             </span>
                           )}
                         </div>
-
-                        {/* Hover Overlay Hint */}
-                        <div className="absolute inset-0 bg-slate-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="px-4 py-2 rounded-full bg-white/95 text-slate-900 text-xs font-bold shadow-md inline-flex items-center gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform">
-                            <Eye className="w-3.5 h-3.5 text-[#15803d]" />
-                            Lihat Manfaat &amp; Komposisi
-                          </span>
-                        </div>
                       </div>
 
                       {/* Detail Deskripsi Rapi & Minimalis */}
@@ -480,17 +455,9 @@ function KatalogContent() {
                           </div>
 
                           <div
-                            className="flex items-center gap-1.5 shrink-0"
+                            className="shrink-0"
                             onClick={(e) => e.stopPropagation()}
                           >
-                            <button
-                              onClick={() => openDetail("PRODUCT", prod)}
-                              className="px-3 py-2 rounded-full border border-slate-200 hover:border-[#15803d] hover:bg-emerald-50 text-slate-700 hover:text-[#15803d] text-xs font-bold transition flex items-center gap-1"
-                            >
-                              <Eye className="w-3.5 h-3.5" />
-                              <span className="hidden sm:inline">Detail</span>
-                            </button>
-
                             <Link
                               href={
                                 isSoldOut
